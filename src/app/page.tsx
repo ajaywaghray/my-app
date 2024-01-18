@@ -9,7 +9,7 @@ import {
 export default function Home() {
   return (
     <main>
-      <div>
+      <div style={{fontWeight: '700'}}>
         Personas
       </div>
       <Select>
