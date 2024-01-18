@@ -9,6 +9,9 @@ import {
 export default function Home() {
   return (
     <main>
+      <div style={{color: '#111928', fontSize: 24, fontFamily: 'Inter', fontWeight: '700', lineHeight: 24, wordWrap: 'break-word'}}>
+        Personas
+      </div>
       <Select>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Bonnie's Workspace Theme" />
