@@ -23,9 +23,15 @@ export default function Home() {
           <TabsList>
             <TabsTrigger value="insights">Insights</TabsTrigger>
             <TabsTrigger value="personas">Personas</TabsTrigger>
+            <TabsTrigger value="chat">Chat</TabsTrigger>
+            <TabsTrigger value="data">Data</TabsTrigger>
+            <TabsTrigger value="surveys">Surveys</TabsTrigger>
           </TabsList>
           <TabsContent value="insights">Insights go here.</TabsContent>
           <TabsContent value="personas">Persona creation goes here.</TabsContent>
+          <TabsContent value="chat">Chats go here.</TabsContent>
+          <TabsContent value="data">Data goes here.</TabsContent>
+          <TabsContent value="surveys">Surveys go here.</TabsContent>
         </Tabs>
         <div style={{ display: 'flex', alignItems: 'top'}}>
           <Avatar style={{ marginRight: '8px' }}>
