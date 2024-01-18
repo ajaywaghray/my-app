@@ -19,6 +19,22 @@ export default function Home() {
         <div style={{fontWeight: '700'}}>
           Personas
         </div>
+        <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+          <Tabs defaultValue="insights" className="w-[800px]">
+            <TabsList>
+              <TabsTrigger value="insights">Insights</TabsTrigger>
+              <TabsTrigger value="personas">Personas</TabsTrigger>
+              <TabsTrigger value="chat">Chat</TabsTrigger>
+              <TabsTrigger value="data">Data</TabsTrigger>
+              <TabsTrigger value="surveys">Surveys</TabsTrigger>
+            </TabsList>
+            <TabsContent value="insights">Insights go here.</TabsContent>
+            <TabsContent value="personas">Persona creation goes here.</TabsContent>
+            <TabsContent value="chat">Chats go here.</TabsContent>
+            <TabsContent value="data">Data goes here.</TabsContent>
+            <TabsContent value="surveys">Surveys go here.</TabsContent>
+          </Tabs>
+        </div>
         <Tabs defaultValue="insights" className="w-[800px]">
           <TabsList>
             <TabsTrigger value="insights">Insights</TabsTrigger>
