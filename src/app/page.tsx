@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export default function Home() {
   return (
@@ -26,16 +27,22 @@ export default function Home() {
           <TabsContent value="insights">Insights go here.</TabsContent>
           <TabsContent value="personas">Persona creation goes here.</TabsContent>
         </Tabs>
-        <Select>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Bonnie's Workspace Theme" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="light">Light</SelectItem>
-            <SelectItem value="dark">Dark</SelectItem>
-            <SelectItem value="system">System</SelectItem>
-          </SelectContent>
-        </Select>
+        <div>
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Select>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Bonnie's Workspace Theme" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="light">Light</SelectItem>
+              <SelectItem value="dark">Dark</SelectItem>
+              <SelectItem value="system">System</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
       </div>
     </main>
   )
