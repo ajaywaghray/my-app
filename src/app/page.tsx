@@ -27,7 +27,7 @@ export default function Home() {
           <TabsContent value="insights">Insights go here.</TabsContent>
           <TabsContent value="personas">Persona creation goes here.</TabsContent>
         </Tabs>
-        <div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>CN</AvatarFallback>
