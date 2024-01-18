@@ -20,7 +20,7 @@ export default function Home() {
           Personas
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-          <Tabs defaultValue="insights" className="w+[400px]">
+          <Tabs defaultValue="insights">
             <TabsList>
               <TabsTrigger value="insights">Insights</TabsTrigger>
               <TabsTrigger value="personas">Personas</TabsTrigger>
@@ -28,11 +28,11 @@ export default function Home() {
               <TabsTrigger value="data">Data</TabsTrigger>
               <TabsTrigger value="surveys">Surveys</TabsTrigger>
             </TabsList>
-            <TabsContent value="insights">Insights go here.</TabsContent>
-            <TabsContent value="personas">Persona creation goes here.</TabsContent>
-            <TabsContent value="chat">Chats go here.</TabsContent>
-            <TabsContent value="data">Data goes here.</TabsContent>
-            <TabsContent value="surveys">Surveys go here.</TabsContent>
+            <TabsContent value="insights" style={{ textAlign: 'center' }}>Insights go here.</TabsContent>
+            <TabsContent value="personas" style={{ textAlign: 'center' }}>Persona creation goes here.</TabsContent>
+            <TabsContent value="chat" style={{ textAlign: 'center' }}>Chats go here.</TabsContent>
+            <TabsContent value="data" style={{ textAlign: 'center' }}>Data goes here.</TabsContent>
+            <TabsContent value="surveys" style={{ textAlign: 'center' }}>Surveys go here.</TabsContent>
           </Tabs>
         </div>
         <div style={{ display: 'flex', alignItems: 'top'}}>
