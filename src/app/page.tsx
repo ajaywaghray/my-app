@@ -19,7 +19,7 @@ export default function Home() {
         <div style={{fontWeight: '700'}}>
           Personas
         </div>
-        <Tabs defaultValue="insights" className="w-[400px]">
+        <Tabs defaultValue="insights" className="w-[800px]">
           <TabsList>
             <TabsTrigger value="insights">Insights</TabsTrigger>
             <TabsTrigger value="personas">Personas</TabsTrigger>
@@ -33,7 +33,7 @@ export default function Home() {
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Select>
-            <SelectTrigger className="w-[180px]">
+            <SelectTrigger className="w-[300px]">
               <SelectValue placeholder="Bonnie's Workspace Theme" />
             </SelectTrigger>
             <SelectContent>
