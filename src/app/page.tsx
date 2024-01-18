@@ -11,7 +11,7 @@ export default function Home() {
     <main>
       <Select>
         <SelectTrigger className="w-[180px]">
-          <SelectValue placeholder="Theme" />
+          <SelectValue placeholder="Bonnie's Workspace Theme" />
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="light">Light</SelectItem>
