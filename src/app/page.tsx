@@ -28,7 +28,7 @@ export default function Home() {
           <TabsContent value="personas">Persona creation goes here.</TabsContent>
         </Tabs>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Avatar>
+          <Avatar style={{paddingRight: '16px'}}>
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
