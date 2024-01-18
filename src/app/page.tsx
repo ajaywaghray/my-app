@@ -6,11 +6,17 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 
+import { Button } from "@/components/ui/button"
+
+
 export default function Home() {
   return (
     <main>
+      <div>
       <div style={{fontWeight: '700'}}>
         Personas
+      </div>
+        <Button>+ Create a persona</Button>
       </div>
       <Select>
         <SelectTrigger className="w-[180px]">
