@@ -20,7 +20,7 @@ export default function Home() {
           Personas
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-          <Tabs defaultValue="insights" className="w-[400px]">
+          <Tabs defaultValue="insights">
             <TabsList>
               <TabsTrigger value="insights">Insights</TabsTrigger>
               <TabsTrigger value="personas">Personas</TabsTrigger>
