@@ -12,10 +12,10 @@ import { Button } from "@/components/ui/button"
 export default function Home() {
   return (
     <main>
-      <div>
-      <div style={{fontWeight: '700'}}>
-        Personas
-      </div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{fontWeight: '700'}}>
+          Personas
+        </div>
         <Button>+ Create a persona</Button>
       </div>
       <Select>
