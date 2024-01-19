@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         </div>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-          <Tabs defaultValue="insights" className="w-[200px]">
+          <Tabs defaultValue="insights" className="w-[500px]">
             <TabsList>
               <TabsTrigger value="insights">Insights</TabsTrigger>
               <TabsTrigger value="personas">Personas</TabsTrigger>
