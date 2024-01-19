@@ -41,7 +41,7 @@ export default function Home() {
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Select>
-            <SelectTrigger className="w-[300px]">
+            <SelectTrigger className="w-[225px]">
               <SelectValue placeholder="Bonnie's Workspace Theme" />
             </SelectTrigger>
             <SelectContent>
