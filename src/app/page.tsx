@@ -17,13 +17,13 @@ export default function Home() {
     <main>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px' }}>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'left' }}>
-        <div style={{ display: 'flex', alignItems: 'center', fontWeight: '700' }}>
-          <img src="/Quikest Logo.svg" alt="Image description" style={{ marginRight: '4px' }} />
-          Quikest
-        </div>
+          <div style={{ display: 'flex', alignItems: 'center', fontWeight: '700' }}>
+            <img src="/Quikest Logo.svg" alt="Image description" style={{ marginRight: '4px' }} />
+            Quikest
+          </div>
         </div>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-          <Tabs defaultValue="insights" className="w-[1000px]">
+          <Tabs defaultValue="insights" className="w-[700px]">
             <TabsList className="grid w-full grid-cols-5">
               <TabsTrigger value="insights">Insights</TabsTrigger>
               <TabsTrigger value="personas">Personas</TabsTrigger>
