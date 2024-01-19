@@ -64,7 +64,7 @@ export default function Home() {
             <DropdownMenuTrigger asChild>
               <Button variant="outline">My Workspace</Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56" style={{ marginTop: '4px', marginRight: '4px' }}>
+            <DropdownMenuContent className="w-56" style={{ marginTop: '16px', marginRight: '16px' }}>
               <DropdownMenuLabel>Account</DropdownMenuLabel>
               <DropdownMenuGroup>
                 <DropdownMenuItem>
