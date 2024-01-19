@@ -18,7 +18,7 @@ export default function Home() {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px' }}>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'left' }}>
           <div style={{ display: 'flex', alignItems: 'top'}}>
-            <img src="/Quikest Logo.svg" alt="Image description" style={{ height: '32px', width: '32px', marginRight: '4px' }} />
+            <img src="/Quikest Logo.svg" alt="Image description" style={{ height: '32px', width: '32px', marginRight: '4px', marginTop: '4px' }} />
             <div style={{ fontWeight: '700', fontSize: '24px' }}>
               Quikest
             </div>
