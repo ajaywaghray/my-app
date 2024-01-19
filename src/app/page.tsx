@@ -73,7 +73,7 @@ export default function Home() {
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   Notifications
-                  <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+                  <DropdownMenuShortcut>⌘N</DropdownMenuShortcut>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   Settings
@@ -85,6 +85,7 @@ export default function Home() {
                 </DropdownMenuItem>
               </DropdownMenuGroup>
               <DropdownMenuSeparator />
+              <DropdownMenuLabel>Workspace</DropdownMenuLabel>
               <DropdownMenuGroup>
                 <DropdownMenuItem>Team</DropdownMenuItem>
                 <DropdownMenuSub>
