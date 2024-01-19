@@ -16,10 +16,10 @@ export default function Home() {
   return (
     <main>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px' }}>
-        <div style={{fontWeight: '700', justifyContent: 'left'}}>
-          Personas
+        <div style={{ flex: 1, display: 'flex', justifyContent: 'left' }}>
+          <div style={{ fontWeight: '700' }}>Personas</div>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center'}}>
+        <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
           <Tabs defaultValue="insights">
             <TabsList>
               <TabsTrigger value="insights">Insights</TabsTrigger>
@@ -35,7 +35,7 @@ export default function Home() {
             <TabsContent value="surveys" style={{ textAlign: 'center' }}>Surveys go here.</TabsContent>
           </Tabs>
         </div>
-        <div style={{ display: 'flex', alignItems: 'top', justifyContent: 'right'}}>
+        <div style={{ flex: 1, display: 'flex', justifyContent: 'right' }}>
           <Avatar style={{ marginRight: '8px' }}>
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>CN</AvatarFallback>
