@@ -22,7 +22,7 @@ export default function Home() {
             Quikest
           </div>
         </div>
-        <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+        <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'top' }}>
           <Tabs defaultValue="insights" className="w-[700px]">
             <TabsList className="grid w-full grid-cols-5">
               <TabsTrigger value="insights">Insights</TabsTrigger>
