@@ -20,7 +20,7 @@ export default function Home() {
           <div style={{ fontWeight: '700' }}>Personas</div>
         </div>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-          <Tabs defaultValue="insights">
+          <Tabs defaultValue="insights" className="w-[400px]">
             <TabsList>
               <TabsTrigger value="insights">Insights</TabsTrigger>
               <TabsTrigger value="personas">Personas</TabsTrigger>
