@@ -65,15 +65,14 @@ export default function Home() {
               <Button variant="outline">My Workspace</Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
-              <DropdownMenuSeparator />
+              <DropdownMenuLabel>Account</DropdownMenuLabel>
               <DropdownMenuGroup>
                 <DropdownMenuItem>
-                  Profile
+                  My Profile
                   <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  Billing
+                  Notifications
                   <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
