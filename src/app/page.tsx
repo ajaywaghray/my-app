@@ -15,7 +15,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 export default function Home() {
   return (
     <main>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px' }}>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'left' }}>
           <div style={{ display: 'flex', alignItems: 'center', fontWeight: '700', fontSize: '24px' }}>
             <img src="/Quikest Logo.svg" alt="Image description" style={{ marginRight: '4px' }} />
