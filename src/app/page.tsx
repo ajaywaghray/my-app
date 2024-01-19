@@ -17,7 +17,10 @@ export default function Home() {
     <main>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px' }}>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'left' }}>
-          <div style={{ fontWeight: '700' }}>Personas</div>
+        <div style={{ display: 'flex', alignItems: 'center', fontWeight: '700' }}>
+          <img src="@/public/Quikest Logo.svg" alt="Image description" style={{ marginRight: '8px' }} />
+          Quikest
+        </div>
         </div>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
           <Tabs defaultValue="insights" className="w-[400px]">
