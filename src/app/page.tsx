@@ -47,7 +47,7 @@ export default function Home() {
     <main>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px' }}>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'left' }}>
-          <div style={{ display: 'flex', alignItems: 'top'}}>
+          <div style={{ display: 'flex', alignItems: 'top', height: '50px'}}>
             <img src="/Quikest Logo.svg" alt="Image description" style={{ height: '32px', width: '32px', marginRight: '4px', marginTop: '4px' }} />
             <div style={{ fontWeight: '700', fontSize: '24px' }}>
               Quikest
@@ -64,7 +64,7 @@ export default function Home() {
               <TabsTrigger value="surveys">Surveys</TabsTrigger>
             </TabsList>
             <TabsContent value="insights">
-              <div style={{ flex: 1, display: 'flex', width: '33vh', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
+              <div style={{ flex: 1, display: 'flex', width: '100vh', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
                 <Card className="w-[350px]">
                   <CardHeader>
                     <CardTitle>Create project</CardTitle>
@@ -107,7 +107,7 @@ export default function Home() {
             <TabsContent value="surveys" style={{ textAlign: 'center' }}>Surveys go here.</TabsContent>
           </Tabs>
         </div>
-        <div style={{ flex: 1, display: 'flex', justifyContent: 'right' }}>
+        <div style={{ flex: 1, display: 'flex', justifyContent: 'right', height: '50px' }}>
           <Avatar style={{ marginRight: '8px' }}>
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>CN</AvatarFallback>
