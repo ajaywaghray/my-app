@@ -63,9 +63,9 @@ export default function Home() {
               <TabsTrigger value="data">Data</TabsTrigger>
               <TabsTrigger value="surveys">Surveys</TabsTrigger>
             </TabsList>
-            <TabsContent value="insights">
+            <TabsContent value="insights" style={{ justifyContent: 'center' }}>
               <div style={{ flex: 1, display: 'flex', width: '100vh', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
-                <Card className="w-[600px]">
+                <Card className="w-[350px]">
                   <CardHeader>
                     <CardTitle>Create project</CardTitle>
                     <CardDescription>Deploy your new project in one-click.</CardDescription>
