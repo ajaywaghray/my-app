@@ -64,7 +64,7 @@ export default function Home() {
               <TabsTrigger value="surveys">Surveys</TabsTrigger>
             </TabsList>
             <TabsContent value="insights">
-            <div style={{ flex: 1, display: 'flex', width: '100%', height: '100%', justifyContent: 'center', marginTop: '50%' }}>
+            <div style={{ flex: 1, display: 'flex', width: '100%', height: '100%', justifyContent: 'center', marginTop: '40%' }}>
               <Card className="w-[350px]">
                 <CardHeader>
                   <CardTitle>Create project</CardTitle>
