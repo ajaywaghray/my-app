@@ -67,29 +67,16 @@ export default function Home() {
               <div style={{ flex: 1, display: 'flex', width: '700px', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
                 <Card className="w-[350px]">
                   <CardHeader>
-                    <CardTitle>Create project</CardTitle>
-                    <CardDescription>Deploy your new project in one-click.</CardDescription>
+                    <CardTitle>Sign up or Login</CardTitle>
+                    <CardDescription>Sign up or login to Quikest.</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <form>
                       <div className="grid w-full items-center gap-4">
                         <div className="flex flex-col space-y-1.5">
-                          <Label htmlFor="name">Name</Label>
-                          <Input id="name" placeholder="Name of your project" />
+                          <Input id="email" placeholder="Email address" />
                         </div>
                         <div className="flex flex-col space-y-1.5">
-                          <Label htmlFor="framework">Framework</Label>
-                          <Select>
-                            <SelectTrigger id="framework">
-                              <SelectValue placeholder="Select" />
-                            </SelectTrigger>
-                            <SelectContent position="popper">
-                              <SelectItem value="next">Next.js</SelectItem>
-                              <SelectItem value="sveltekit">SvelteKit</SelectItem>
-                              <SelectItem value="astro">Astro</SelectItem>
-                              <SelectItem value="nuxt">Nuxt.js</SelectItem>
-                            </SelectContent>
-                          </Select>
                         </div>
                       </div>
                     </form>
