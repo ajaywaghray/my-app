@@ -65,7 +65,7 @@ export default function Home() {
             </TabsList>
             <TabsContent value="insights">
               <div style={{ flex: 1, display: 'flex', width: '100vh', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
-                <Card className="w-[350px]">
+                <Card className="w-[600px]">
                   <CardHeader>
                     <CardTitle>Create project</CardTitle>
                     <CardDescription>Deploy your new project in one-click.</CardDescription>
