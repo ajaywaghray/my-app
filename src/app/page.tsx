@@ -66,7 +66,7 @@ export default function Home() {
               <TabsTrigger value="surveys">Surveys</TabsTrigger>
             </TabsList>
             <TabsContent value="insights" style={{ justifyContent: 'center' }}>
-              <div style={{ flex: 1, display: 'flex', width: '699px', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
+              <div style={{ flex: 1, display: 'flex', width: '700px', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
                 <Card className="w-[350px]">
                   <CardHeader>
                     <CardTitle>Sign up or Login</CardTitle>
@@ -97,11 +97,7 @@ export default function Home() {
           </Tabs>
         </div>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'right', height: '50px' }}>
-          <Avatar style={{ marginRight: '8px' }}>
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-          <UserButton afterSignOutUrl="/"/>
+          <div style={{ marginRight: '8px' }}><UserButton afterSignOutUrl="/"/></div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline">My Workspace</Button>
