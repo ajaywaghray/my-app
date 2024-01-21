@@ -42,6 +42,8 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
+import { UserButton } from "@clerk/nextjs";
+
 export default function Home() {
   return (
     <main>
@@ -99,6 +101,7 @@ export default function Home() {
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
+          <UserButton afterSignOutUrl="/"/>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline">My Workspace</Button>
