@@ -2,6 +2,19 @@ import * as React from "react"
 
 import { UserButton } from "@clerk/nextjs";
 
+import { Button } from "@/components/ui/button"
+
+import { Input } from "@/components/ui/input"
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
 export default function Onboarding () {
   return (
     <main>
@@ -20,6 +33,29 @@ export default function Onboarding () {
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: '600', fontSize: '30px' }}>
         Welcome to Quikest!
+      </div>
+      <div style={{ flex: 1, display: 'flex', width: '700px', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
+        <Card className="w-[350px]">
+          <CardHeader>
+            <CardTitle>Sign up or Login</CardTitle>
+            <CardDescription>Sign up or login to Quikest.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <form>
+              <div className="grid w-full items-center gap-4">
+                <div className="flex flex-col space-y-1.5">
+                  <Input id="email" placeholder="Email address" />
+                </div>
+                <div className="flex flex-col space-y-1.5">
+                </div>
+              </div>
+            </form>
+          </CardContent>
+          <CardFooter className="flex justify-between">
+            <Button variant="outline">Cancel</Button>
+            <Button>Deploy</Button>
+          </CardFooter>
+        </Card>
       </div>
     </main>
   )
