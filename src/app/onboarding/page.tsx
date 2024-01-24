@@ -1,5 +1,7 @@
 import * as React from "react"
 
+import { UserButton } from "@clerk/nextjs";
+
 export default function Onboarding () {
   return (
     <main>
@@ -11,6 +13,9 @@ export default function Onboarding () {
               Quikest
             </div>
           </div>
+        </div>
+        <div style={{ flex: 1, display: 'flex', justifyContent: 'right', height: '50px' }}>
+          <div style={{ marginRight: '8px' }}><UserButton afterSignOutUrl="/"/></div>
         </div>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: '600', fontSize: '30px' }}>
