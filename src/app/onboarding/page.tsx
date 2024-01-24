@@ -2,8 +2,10 @@ import * as React from "react"
 
 export default function Onboarding () {
   return (
-    <p>
-      Onboarding
-    </p>
+    <main>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', justifyItems: 'center' }}>
+        Onboarding
+      </div>
+    </main>
   )
 }
