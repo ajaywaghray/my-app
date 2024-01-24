@@ -1,10 +1,9 @@
-import { NextPage } from 'next'
+import * as React from "react"
 
-const OnboardingPage : NextPage = () => {
+export default function Onboarding () {
   return (
     <p>
       Onboarding
     </p>
   )
 }
-export default OnboardingPage
