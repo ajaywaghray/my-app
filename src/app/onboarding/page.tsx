@@ -34,7 +34,7 @@ export default function Onboarding () {
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: '600', fontSize: '30px' }}>
         Welcome to Quikest!
       </div>
-      <div style={{ flex: 1, display: 'flex', width: '700px', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
+      <div style={{ display: 'flex', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
         <Card className="w-[350px]">
           <CardHeader>
             <CardTitle>Sign up or Login</CardTitle>
