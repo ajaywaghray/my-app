@@ -77,13 +77,13 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               <CardHeader>
               </CardHeader>
               <CardContent>
-                <div style={{ display: 'flex', height: '75vh', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div style={{ display: 'flex', height: '24px', justifyContent: 'space-between', alignItems: 'center' }}>
                   <div style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
                     Lets get to know you, Bonnie.
                   </div>
                   <Button onClick={onNext}>Next</Button>
                 </div>
-                <div style={{width: '100%', height: '100%', color: '#18181B', fontSize: 16, fontFamily: 'Inter', fontWeight: '700', lineHeight: 24, wordWrap: 'break-word'}}>Whats your role?</div>
+                <div style={{ display: 'flex', height: '24px' color: '#18181B', fontSize: 16, fontFamily: 'Inter', fontWeight: '700', lineHeight: 24, wordWrap: 'break-word'}}>Whats your role?</div>
               </CardContent>
               <CardFooter className="flex justify-between">
               </CardFooter>
