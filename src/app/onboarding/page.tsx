@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 import OnboardingStepOne from '@/components/ui/onboardingStepOne';
 
-import OnboardingStepTwo from '@/components/ui/onboardingStepOne';
+import OnboardingStepTwo from '@/components/ui/onboardingStepTwo';
 
 import OnboardingStepThree from '@/components/ui/onboardingStepThree';
 
