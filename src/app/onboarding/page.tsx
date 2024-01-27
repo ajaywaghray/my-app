@@ -10,23 +10,6 @@ import OnboardingStepTwo from '@/components/ui/onboardingStepTwo';
 
 import OnboardingStepThree from '@/components/ui/onboardingStepThree';
 
-import { UserButton } from "@clerk/nextjs";
-
-import { Button } from "@/components/ui/button"
-
-import { Input } from "@/components/ui/input"
-
-import { Checkbox } from "@/components/ui/checkbox"
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-
 const OnboardingPage = () => {
   const [state, setState] = React.useState();
   const [step, setStep] = useState<number>(1);

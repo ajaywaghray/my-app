@@ -75,22 +75,16 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
             <div style={{ display: 'flex', height: '50vh', justifyContent: 'center', alignItems: 'top', marginTop: '16px' }}>
             <Card className="w-[700px]">
                 <CardHeader>
-                <CardTitle>Sign up or Login</CardTitle>
-                <CardDescription>Sign up or login to Quikest.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                <form>
-                    <div className="grid w-full items-center gap-4">
-                    <div className="flex flex-col space-y-1.5">
-                        <Input id="email" placeholder="Email address" />
+                  <div style={{ display: 'flex', height: '50vh', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
+                      Welcome to Quikest!
                     </div>
-                    <div className="flex flex-col space-y-1.5">
-                    </div>
-                    </div>
-                </form>
+                    <Button onClick={onNext}>Next</Button>
+                  </div>
                 </CardContent>
                 <CardFooter className="flex justify-between">
-                <Button onClick={onNext}>Next</Button>
                 </CardFooter>
             </Card>
         </div>
