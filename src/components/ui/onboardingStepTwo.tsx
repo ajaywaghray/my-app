@@ -53,6 +53,7 @@ interface OnboardingStepProps {
 
 const OnboardingStepTwo = ({ onNext, onBack }: { onNext: () => void; onBack: () => void }) => {
   // Add state management and form handling here
+  const [state, setState] = React.useState();
 
   return (
     <main>

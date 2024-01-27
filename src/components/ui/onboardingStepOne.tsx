@@ -48,6 +48,7 @@ import { UserButton } from "@clerk/nextjs";
 
 const OnboardingStepOne = ({ onNext, onBack }: { onNext: () => void; onBack: () => void }) => {
   // Add state management and form handling here
+  const [state, setState] = React.useState();
 
   return (
     <main>
