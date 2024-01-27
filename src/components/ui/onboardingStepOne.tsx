@@ -79,7 +79,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 <CardContent>
                   <div style={{ display: 'flex', height: '50vh', justifyContent: 'space-between', alignItems: 'center' }}>
                     <div style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
-                      Welcome to Quikest!
+                      Let's get to know you, Bonnie.
                     </div>
                     <Button onClick={onNext}>Next</Button>
                   </div>
