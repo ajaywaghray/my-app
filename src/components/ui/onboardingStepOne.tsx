@@ -91,7 +91,7 @@ const OnboardingStepOne = ({ onNext, onBack }: { onNext: () => void; onBack: () 
                 </CardContent>
                 <CardFooter className="flex justify-between">
                 <Button variant="outline">Cancel</Button>
-                <Button>Deploy</Button>
+                <Button onClick={onNext}>Next</Button>
                 </CardFooter>
             </Card>
         </div>
