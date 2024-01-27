@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/card"
 
 const OnboardingPage = () => {
+  const [state, setState] = React.useState();
   const [step, setStep] = useState<number>(1);
 
   const nextStep = () => setStep(prev => prev + 1);
