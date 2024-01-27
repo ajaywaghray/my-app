@@ -50,7 +50,7 @@ import {
 
 import { UserButton } from "@clerk/nextjs";
 
-const OnboardingStepOne = ({ onNext, onBack }: { onNext: () => void; onBack: () => void }) => {
+const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   // Add state management and form handling here
   const [state, setState] = React.useState();
 
@@ -90,7 +90,6 @@ const OnboardingStepOne = ({ onNext, onBack }: { onNext: () => void; onBack: () 
                 </form>
                 </CardContent>
                 <CardFooter className="flex justify-between">
-                <Button variant="outline" onClick={onBack}>Back</Button>
                 <Button onClick={onNext}>Next</Button>
                 </CardFooter>
             </Card>

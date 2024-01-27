@@ -55,7 +55,7 @@ interface OnboardingStepProps {
     onBack: () => void;
 }
 
-const OnboardingStepTwo = ({ onNext, onBack }: { onNext: () => void; onBack: () => void }) => {
+const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
   // Add state management and form handling here
   const [state, setState] = React.useState();
 
@@ -95,7 +95,6 @@ const OnboardingStepTwo = ({ onNext, onBack }: { onNext: () => void; onBack: () 
           </form>
         </CardContent>
         <CardFooter className="flex justify-between">
-          <Button variant="outline" onClick={onBack}>Back</Button>
           <Button onClick={onNext}>Analyze</Button>
         </CardFooter>
       </Card>

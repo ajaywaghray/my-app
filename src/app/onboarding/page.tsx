@@ -36,9 +36,9 @@ const OnboardingPage = () => {
 
   return (
     <div>
-      {step === 1 && <OnboardingStepOne onNext={nextStep} onBack={prevStep} />}
-      {step === 2 && <OnboardingStepTwo onNext={nextStep} onBack={prevStep} />}
-      {step === 3 && <OnboardingStepThree onNext={nextStep} onBack={prevStep} />}
+      {step === 1 && <OnboardingStepOne onNext={nextStep} />}
+      {step === 2 && <OnboardingStepTwo onNext={nextStep}/>}
+      {step === 3 && <OnboardingStepThree onNext={nextStep}/>}
     </div>
   );
 };
