@@ -90,8 +90,8 @@ const OnboardingStepThree = ({ onNext, onBack }: { onNext: () => void; onBack: (
           </form>
         </CardContent>
         <CardFooter className="flex justify-between">
-          <Button variant="outline">Cancel</Button>
-          <Button>Deploy</Button>
+          <Button variant="outline" onClick={onBack}>Cancel</Button>
+          <Button onClick={onNext}>Next</Button>
         </CardFooter>
       </Card>
     </div>
