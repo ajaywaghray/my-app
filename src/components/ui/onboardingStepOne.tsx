@@ -83,7 +83,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                   </div>
                   <Button onClick={onNext}>Next</Button>
                 </div>
-                <div style={{ display: 'flex', height: '24px', color: '#18181B', fontSize: '16px', fontWeight: '700' }}>Whats your role?</div>
+                <div style={{ display: 'flex', height: '24px', fontSize: '16px', fontWeight: '700' }}>Whats your role?</div>
               </CardContent>
               <CardFooter className="flex justify-between">
               </CardFooter>
