@@ -38,7 +38,7 @@ function HeaderComponent() {
     const { setTheme } = useTheme()
     
     return (        
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px', borderBottom: '1px solid', zIndex: '1000' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px', borderBottom: '1px solid #737373', position: 'sticky', top: '0' }}>
             <div style={{ flex: 1, display: 'flex', justifyContent: 'left' }}>
             <div style={{ display: 'flex', alignItems: 'top', height: '50px'}}>
                 <img src="/Quikest Logo.svg" alt="Image description" style={{ height: '32px', width: '32px', marginRight: '4px', marginTop: '4px' }} />
@@ -54,33 +54,9 @@ function HeaderComponent() {
                 <TabsTrigger value="personas">Personas</TabsTrigger>
                 <TabsTrigger value="data">Data</TabsTrigger>
                 </TabsList>
-                <TabsContent value="insights" style={{ justifyContent: 'center' }}>
-                <div style={{ flex: 1, display: 'flex', width: '700px', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
-                    <Card className="w-[350px]">
-                    <CardHeader>
-                        <CardTitle>Sign up or Login</CardTitle>
-                        <CardDescription>Sign up or login to Quikest.</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                        <form>
-                        <div className="grid w-full items-center gap-4">
-                            <div className="flex flex-col space-y-1.5">
-                            <Input id="email" placeholder="Email address" />
-                            </div>
-                            <div className="flex flex-col space-y-1.5">
-                            </div>
-                        </div>
-                        </form>
-                    </CardContent>
-                    <CardFooter className="flex justify-between">
-                        <Button variant="outline">Cancel</Button>
-                        <Button>Deploy</Button>
-                    </CardFooter>
-                    </Card>
-                </div>
-                </TabsContent>
-                <TabsContent value="personas" style={{ textAlign: 'center' }}>Persona creation goes here.</TabsContent>
-                <TabsContent value="data" style={{ textAlign: 'center' }}>Data goes here.</TabsContent>
+                <TabsContent value="insights" style={{ textAlign: 'center' }}></TabsContent>
+                <TabsContent value="personas" style={{ textAlign: 'center' }}></TabsContent>
+                <TabsContent value="data" style={{ textAlign: 'center' }}></TabsContent>
             </Tabs>
             </div>
             <div style={{ flex: 1, display: 'flex', justifyContent: 'right', height: '50px' }}>
