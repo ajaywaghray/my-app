@@ -77,7 +77,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               <CardHeader>
               </CardHeader>
               <CardContent>
-                <div style={{ display: 'flex', height: '24px', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div style={{ display: 'flex', height: '48px', justifyContent: 'space-between', alignItems: 'center' }}>
                   <div style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
                     Lets get to know you, Bonnie.
                   </div>
