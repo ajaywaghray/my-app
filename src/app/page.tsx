@@ -2,6 +2,8 @@
 
 import * as React from "react"
 
+import HeaderComponent from "../components/common/header";
+
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
 
 import { useTheme } from "next-themes"
@@ -57,6 +59,7 @@ export default function Home() {
 
   return (
     <main>
+      <HeaderComponent></HeaderComponent> 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px' }}>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'left' }}>
           <div style={{ display: 'flex', alignItems: 'top', height: '50px'}}>
