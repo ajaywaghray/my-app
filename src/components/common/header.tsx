@@ -40,7 +40,7 @@ function HeaderComponent() {
     return (        
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px', borderBottom: '1px solid #E4E4E7', position: 'sticky', top: '0' }}>
             <div style={{ flex: 1, display: 'flex', justifyContent: 'left' }}>
-            <div style={{ display: 'flex', alignItems: 'top', height: '40px'}}>
+            <div style={{ display: 'flex', alignItems: 'top', height: '32px'}}>
                 <img src="/Quikest Logo.svg" alt="Image description" style={{ height: '32px', width: '32px', marginRight: '4px', marginTop: '4px' }} />
                 <div style={{ fontWeight: '700', fontSize: '24px' }}>
                 Quikest
@@ -59,8 +59,8 @@ function HeaderComponent() {
                 <TabsContent value="data" style={{ textAlign: 'center' }}></TabsContent>
             </Tabs>
             </div>
-            <div style={{ flex: 1, display: 'flex', justifyContent: 'right', height: '40px' }}>
-            <div style={{ flex: 1, display: 'flex', justifyContent: 'right', marginRight: '8px', height: '40px' }}>
+            <div style={{ flex: 1, display: 'flex', justifyContent: 'right', height: '32px' }}>
+            <div style={{ flex: 1, display: 'flex', justifyContent: 'right', marginRight: '8px', height: '32px' }}>
                 <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <Button variant="outline" size="icon">
