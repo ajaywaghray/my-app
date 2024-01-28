@@ -67,11 +67,10 @@ function HeaderComponent() {
             </div>
             <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
             <Tabs defaultValue="insights" className="w-[700px]">
-                <TabsList className="grid w-full grid-cols-5">
+                <TabsList className="grid w-full grid-cols-3">
                 <TabsTrigger value="insights">Insights</TabsTrigger>
                 <TabsTrigger value="personas">Personas</TabsTrigger>
                 <TabsTrigger value="data">Data</TabsTrigger>
-                <TabsTrigger value="surveys">Surveys</TabsTrigger>
                 </TabsList>
                 <TabsContent value="insights" style={{ justifyContent: 'center' }}>
                 <div style={{ flex: 1, display: 'flex', width: '700px', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
@@ -100,7 +99,6 @@ function HeaderComponent() {
                 </TabsContent>
                 <TabsContent value="personas" style={{ textAlign: 'center' }}>Persona creation goes here.</TabsContent>
                 <TabsContent value="data" style={{ textAlign: 'center' }}>Data goes here.</TabsContent>
-                <TabsContent value="surveys" style={{ textAlign: 'center' }}>Surveys go here.</TabsContent>
             </Tabs>
             </div>
             <div style={{ flex: 1, display: 'flex', justifyContent: 'right', height: '50px' }}>
