@@ -107,7 +107,7 @@ export default function Home() {
           </Tabs>
         </div>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'right', height: '50px' }}>
-          <div style={{ flex: 1, display: 'flex', justifyContent: 'right', height: '50px' }}>
+          <div style={{ flex: 1, display: 'flex', justifyContent: 'right', marginRight: '8px', height: '50px' }}>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="icon">
