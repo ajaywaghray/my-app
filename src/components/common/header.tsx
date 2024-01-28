@@ -38,7 +38,7 @@ function HeaderComponent() {
     const { setTheme } = useTheme()
     
     return (        
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px', borderBottom: '1px solid', position: 'fixed' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px', borderBottom: '1px solid' }}>
             <div style={{ flex: 1, display: 'flex', justifyContent: 'left' }}>
             <div style={{ display: 'flex', alignItems: 'top', height: '50px'}}>
                 <img src="/Quikest Logo.svg" alt="Image description" style={{ height: '32px', width: '32px', marginRight: '4px', marginTop: '4px' }} />
