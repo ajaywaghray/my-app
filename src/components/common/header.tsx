@@ -6,28 +6,14 @@ import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
 
 import { useTheme } from "next-themes"
 
-import { Checkbox } from "@/components/ui/checkbox"
-
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
-
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuPortal,
   DropdownMenuSeparator,
   DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
@@ -35,11 +21,7 @@ import { Button } from "@/components/ui/button"
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-
 import { Input } from "@/components/ui/input"
-
-import { Label } from "@/components/ui/label"
 
 import {
   Card,
@@ -56,7 +38,7 @@ function HeaderComponent() {
     const { setTheme } = useTheme()
     
     return (        
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px', borderBottom: '1px solid', position: 'fixed' }}>
             <div style={{ flex: 1, display: 'flex', justifyContent: 'left' }}>
             <div style={{ display: 'flex', alignItems: 'top', height: '50px'}}>
                 <img src="/Quikest Logo.svg" alt="Image description" style={{ height: '32px', width: '32px', marginRight: '4px', marginTop: '4px' }} />
