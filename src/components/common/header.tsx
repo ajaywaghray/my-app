@@ -70,7 +70,6 @@ function HeaderComponent() {
                 <TabsList className="grid w-full grid-cols-5">
                 <TabsTrigger value="insights">Insights</TabsTrigger>
                 <TabsTrigger value="personas">Personas</TabsTrigger>
-                <TabsTrigger value="chat">Chat</TabsTrigger>
                 <TabsTrigger value="data">Data</TabsTrigger>
                 <TabsTrigger value="surveys">Surveys</TabsTrigger>
                 </TabsList>
@@ -100,7 +99,6 @@ function HeaderComponent() {
                 </div>
                 </TabsContent>
                 <TabsContent value="personas" style={{ textAlign: 'center' }}>Persona creation goes here.</TabsContent>
-                <TabsContent value="chat" style={{ textAlign: 'center' }}>Chats go here.</TabsContent>
                 <TabsContent value="data" style={{ textAlign: 'center' }}>Data goes here.</TabsContent>
                 <TabsContent value="surveys" style={{ textAlign: 'center' }}>Surveys go here.</TabsContent>
             </Tabs>
