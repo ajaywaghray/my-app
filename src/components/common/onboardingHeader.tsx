@@ -60,45 +60,6 @@ function OnboardingHeaderComponent() {
                 </DropdownMenu>
             </div>
             <div style={{ marginRight: '8px' }}><UserButton afterSignOutUrl="/"/></div>
-            <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                <Button variant="outline">My Workspace</Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56" style={{ marginTop: '16px', marginRight: '16px' }}>
-                <DropdownMenuLabel>Account</DropdownMenuLabel>
-                <DropdownMenuGroup>
-                    <DropdownMenuItem>
-                    My Profile
-                    <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                    Notifications
-                    <DropdownMenuShortcut>⌘N</DropdownMenuShortcut>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                    Settings
-                    <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                    Keyboard shortcuts
-                    <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
-                    </DropdownMenuItem>
-                </DropdownMenuGroup>
-                <DropdownMenuSeparator />
-                <DropdownMenuLabel>Workspace</DropdownMenuLabel>
-                <DropdownMenuGroup>
-                    <DropdownMenuItem>Team</DropdownMenuItem>
-                    <DropdownMenuItem>Settings</DropdownMenuItem>
-                    <DropdownMenuItem>Plans</DropdownMenuItem>
-                    <DropdownMenuItem>Billing</DropdownMenuItem>
-                </DropdownMenuGroup>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>
-                    Log out
-                    <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
-                </DropdownMenuItem>
-                </DropdownMenuContent>
-            </DropdownMenu>
             </div>
         </div>  
     )
