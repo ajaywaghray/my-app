@@ -21,17 +21,6 @@ import { Button } from "@/components/ui/button"
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-import { Input } from "@/components/ui/input"
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-
 import { UserButton } from "@clerk/nextjs";
 
 function HeaderComponent() {    
