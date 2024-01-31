@@ -36,18 +36,6 @@ function OnboardingHeaderComponent() {
                 </div>
             </div>
             </div>
-            <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-            <Tabs defaultValue="insights" className="w-[700px]">
-                <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="insights">Insights</TabsTrigger>
-                <TabsTrigger value="personas">Personas</TabsTrigger>
-                <TabsTrigger value="data">Data</TabsTrigger>
-                </TabsList>
-                <TabsContent value="insights" style={{ textAlign: 'center' }}></TabsContent>
-                <TabsContent value="personas" style={{ textAlign: 'center' }}></TabsContent>
-                <TabsContent value="data" style={{ textAlign: 'center' }}></TabsContent>
-            </Tabs>
-            </div>
             <div style={{ flex: 1, display: 'flex', justifyContent: 'right', height: '32px' }}>
             <div style={{ flex: 1, display: 'flex', justifyContent: 'right', marginRight: '8px', height: '32px' }}>
                 <DropdownMenu>
