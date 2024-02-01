@@ -124,6 +124,46 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </label>
             </div>
 
+            <div className="flex items-center space-x-2" style={{ border: '1px rounded', padding: '8px' }}>
+              <Checkbox id="clevel" />
+              <label
+                htmlFor="clevel"
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              >
+                C-Level
+              </label>
+            </div>
+            
+            <div className="flex items-center space-x-2" style={{ border: '1px rounded', padding: '8px' }}>
+              <Checkbox id="teamlead" />
+              <label
+                htmlFor="teamlead"
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              >
+                Team Lead
+              </label>
+            </div>
+
+            <div className="flex items-center space-x-2" style={{ border: '1px rounded', padding: '8px' }}>
+              <Checkbox id="ic" />
+              <label
+                htmlFor="ic"
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              >
+                Individual Contributor
+              </label>
+            </div>
+
+            <div className="flex items-center space-x-2" style={{ border: '1px rounded', padding: '8px' }}>
+              <Checkbox id="other" />
+              <label
+                htmlFor="other"
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              >
+                Other
+              </label>
+            </div>
+
           </CardContent>
           <CardFooter className="flex justify-between">
           </CardFooter>
