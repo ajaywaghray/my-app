@@ -114,29 +114,15 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               Whats your role?
             </div>
             
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
-                  name="mobile"
-                  render={({ field }) => (
-                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 shadow">
-                      <FormControl>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                        />
-                      </FormControl>
-                      <div className="space-y-1 leading-none">
-                        <FormLabel>
-                          Founder
-                        </FormLabel>
-                      </div>
-                    </FormItem>
-                  )}
-                />
-              </form>
-            </Form>
+            <div className="flex items-center space-x-2" style={{ border: '1px rounded', padding: '8px' }}>
+              <Checkbox id="founder" />
+              <label
+                htmlFor="founder"
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              >
+                Founder
+              </label>
+            </div>
 
           </CardContent>
           <CardFooter className="flex justify-between">
