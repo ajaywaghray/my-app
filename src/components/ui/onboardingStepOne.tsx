@@ -58,7 +58,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   return (
     <main>
       <OnboardingHeaderComponent></OnboardingHeaderComponent>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: '600', fontSize: '30px' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: '600', fontSize: '30px', marginTop: '16px' }}>
         Welcome to Quikest!
       </div>
       <div style={{ display: 'flex', height: '50vh', justifyContent: 'center', alignItems: 'top', marginTop: '16px' }}>
@@ -72,7 +72,16 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
               <Button onClick={onNext}>Next</Button>
             </div>
-            <div style={{ display: 'flex', height: '24px', fontSize: '16px', fontWeight: '700' }}>Whats your role?</div>
+            <div style={{ display: 'flex', height: '24px', fontSize: '16px', fontWeight: '700' }}>
+              Whats your role?
+            </div>
+            <Checkbox id="founder" />
+              <label
+                htmlFor="founder"
+                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              >
+                Founder
+              </label>
           </CardContent>
           <CardFooter className="flex justify-between">
           </CardFooter>
