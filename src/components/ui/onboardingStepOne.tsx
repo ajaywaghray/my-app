@@ -115,7 +115,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
             </div>
             
             <div className="flex items-center space-x-2" style={{ padding: '8px' }}>
-              <div className="flex items-center space-x-2" style={{ border: '1px solid black', padding: '8px' }}>  
+              <div className="flex items-center space-x-2" style={{ border: '1px solid black', borderRadius: '8px', padding: '8px' }}>  
                 <Checkbox id="founder" />
                 <label
                   htmlFor="founder"
