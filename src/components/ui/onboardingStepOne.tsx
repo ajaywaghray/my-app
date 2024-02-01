@@ -114,7 +114,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               Whats your role?
             </div>
             
-            <div className="flex items-center space-x-2" style={{ border: '1px rounded', padding: '8px' }}>
+            <div className="flex items-center space-x-2" style={{ border: '1px', padding: '8px' }}>
               <Checkbox id="founder" />
               <label
                 htmlFor="founder"
@@ -122,9 +122,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               >
                 Founder
               </label>
-            </div>
 
-            <div className="flex items-center space-x-2" style={{ border: '1px rounded', padding: '8px' }}>
               <Checkbox id="clevel" />
               <label
                 htmlFor="clevel"
@@ -132,9 +130,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               >
                 C-Level
               </label>
-            </div>
             
-            <div className="flex items-center space-x-2" style={{ border: '1px rounded', padding: '8px' }}>
               <Checkbox id="teamlead" />
               <label
                 htmlFor="teamlead"
@@ -142,9 +138,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               >
                 Team Lead
               </label>
-            </div>
-
-            <div className="flex items-center space-x-2" style={{ border: '1px rounded', padding: '8px' }}>
+            
               <Checkbox id="ic" />
               <label
                 htmlFor="ic"
@@ -152,9 +146,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               >
                 Individual Contributor
               </label>
-            </div>
-
-            <div className="flex items-center space-x-2" style={{ border: '1px rounded', padding: '8px' }}>
+            
               <Checkbox id="other" />
               <label
                 htmlFor="other"
