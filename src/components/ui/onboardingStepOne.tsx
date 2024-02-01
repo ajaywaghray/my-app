@@ -115,7 +115,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
             </div>
             
             <div className="flex items-center space-x-2" style={{ padding: '8px' }}>
-              <div className="flex items-center space-x-2" style={{ border: '1px solid var(--border)', borderRadius: '8px', padding: '8px' }}>  
+              <div className="flex items-center space-x-2" style={{ border: '1px solid gray', borderRadius: '8px', padding: '8px' }}>  
                 <Checkbox id="founder" />
                 <label
                   htmlFor="founder"
@@ -125,37 +125,45 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <Checkbox id="clevel" />
-              <label
-                htmlFor="clevel"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                C-Level
-              </label>
+              <div className="flex items-center space-x-2" style={{ border: '1px solid gray', borderRadius: '8px', padding: '8px' }}>  
+                <Checkbox id="clevel" />
+                <label
+                  htmlFor="clevel"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  C-Level
+                </label>
+              </div>
+
+              <div className="flex items-center space-x-2" style={{ border: '1px solid gray', borderRadius: '8px', padding: '8px' }}>  
+                <Checkbox id="teamlead" />
+                <label
+                  htmlFor="teamlead"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Team Lead
+                </label>
+                </div>
             
-              <Checkbox id="teamlead" />
-              <label
-                htmlFor="teamlead"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                Team Lead
-              </label>
+              <div className="flex items-center space-x-2" style={{ border: '1px solid gray', borderRadius: '8px', padding: '8px' }}>  
+                <Checkbox id="ic" />
+                <label
+                  htmlFor="ic"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Individual Contributor
+                </label>
+              </div>
             
-              <Checkbox id="ic" />
-              <label
-                htmlFor="ic"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                Individual Contributor
-              </label>
-            
-              <Checkbox id="other" />
-              <label
-                htmlFor="other"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                Other
-              </label>
+              <div className="flex items-center space-x-2" style={{ border: '1px solid gray', borderRadius: '8px', padding: '8px' }}>  
+                <Checkbox id="other" />
+                <label
+                  htmlFor="other"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Other
+                </label>
+              </div>
             </div>
 
           </CardContent>
