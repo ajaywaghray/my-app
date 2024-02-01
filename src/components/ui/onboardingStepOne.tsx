@@ -125,7 +125,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2" style={{ border: '1px solid gray', borderRadius: '8px', padding: '8px' }}>  
+              <div className="flex items-center space-x-2" style={{ border: '1px solid var(--border)', borderColor: "var(--border)",  borderRadius: '8px', padding: '8px' }}>  
                 <Checkbox id="clevel" />
                 <label
                   htmlFor="clevel"
