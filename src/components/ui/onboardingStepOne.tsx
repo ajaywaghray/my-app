@@ -114,14 +114,16 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               Whats your role?
             </div>
             
-            <div className="flex items-center space-x-2" style={{ border: '1px', padding: '8px' }}>
-              <Checkbox id="founder" />
-              <label
-                htmlFor="founder"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                Founder
-              </label>
+            <div className="flex items-center space-x-2" style={{ padding: '8px' }}>
+              <div className="flex items-center space-x-2" style={{ border: '1px solid black', padding: '8px' }}>  
+                <Checkbox id="founder" />
+                <label
+                  htmlFor="founder"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Founder
+                </label>
+              </div>
 
               <Checkbox id="clevel" />
               <label
