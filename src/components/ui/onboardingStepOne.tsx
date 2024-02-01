@@ -78,7 +78,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
             <Checkbox id="founder" />
               <label
                 htmlFor="founder"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="text-sm font-medium border leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
               >
                 Founder
               </label>
