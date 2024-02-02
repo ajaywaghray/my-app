@@ -125,8 +125,8 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-400 dark:border-zinc-500 rounded-lg" style={{ padding: '8px' }}>      
-                <Checkbox id="clevel" />
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 rounded-lg" style={{ padding: '8px' }}>      
+                <Checkbox id="clevel" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="clevel"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -135,8 +135,8 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-400 dark:border-zinc-500 rounded-lg" style={{ padding: '8px' }}>      
-                <Checkbox id="teamlead" />
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 rounded-lg" style={{ padding: '8px' }}>      
+                <Checkbox id="teamlead" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="teamlead"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -145,8 +145,8 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
                 </div>
             
-                <div className="flex items-center space-x-2 border-2 border-zinc-400 dark:border-zinc-500 rounded-lg" style={{ padding: '8px' }}>    
-                <Checkbox id="ic" />
+                <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 rounded-lg" style={{ padding: '8px' }}>    
+                <Checkbox id="ic" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="ic"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -155,8 +155,8 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
             
-              <div className="flex items-center space-x-2 border-2 border-zinc-400 dark:border-zinc-500 rounded-lg" style={{ padding: '8px' }}>      
-                <Checkbox id="other" />
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 rounded-lg" style={{ padding: '8px' }}>      
+                <Checkbox id="other" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="other"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
