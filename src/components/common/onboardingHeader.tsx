@@ -21,7 +21,7 @@ function OnboardingHeaderComponent() {
     const { setTheme } = useTheme()
     
     return (        
-        <div className="border-b-zinc-400 dark:border-b-zinc-500" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px', position: 'sticky', top: '0' }}>
+        <div className="border border-b-zinc-400 dark:border-b-zinc-500" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px', position: 'sticky', top: '0' }}>
             <div style={{ flex: 1, display: 'flex', justifyContent: 'left' }}>
             <div style={{ display: 'flex', alignItems: 'top', height: '32px'}}>
                 <img src="/Quikest Logo.svg" alt="Image description" style={{ height: '32px', width: '32px', marginRight: '4px', marginTop: '4px' }} />
