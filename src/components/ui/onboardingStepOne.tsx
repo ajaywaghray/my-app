@@ -125,7 +125,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2" style={{ border: '1px solid', borderColor: "var(--border)",  borderRadius: '8px', padding: '8px' }}>  
+              <div className="flex items-center space-x-2 border-2 border-border rounded-lg" style={{ padding: '8px' }}>    
                 <Checkbox id="clevel" />
                 <label
                   htmlFor="clevel"
@@ -135,7 +135,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2" style={{ border: '1px solid', borderColor: "var(--border)",  borderRadius: '8px', padding: '8px'  }}>  
+              <div className="flex items-center space-x-2 border-2 border-border rounded-lg" style={{ padding: '8px' }}>    
                 <Checkbox id="teamlead" />
                 <label
                   htmlFor="teamlead"
@@ -145,7 +145,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
                 </div>
             
-              <div className="flex items-center space-x-2" style={{ border: '1px solid', borderColor: "var(--border)",  borderRadius: '8px', padding: '8px' }}>  
+              <div className="flex items-center space-x-2 border-2 border-border rounded-lg" style={{ padding: '8px' }}>  
                 <Checkbox id="ic" />
                 <label
                   htmlFor="ic"
@@ -155,7 +155,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
             
-              <div className="flex items-center space-x-2" style={{ border: '1px solid', borderColor: "var(--border)",  borderRadius: '8px', padding: '8px' }}>  
+              <div className="flex items-center space-x-2 border-2 border-border rounded-lg" style={{ padding: '8px' }}>    
                 <Checkbox id="other" />
                 <label
                   htmlFor="other"
