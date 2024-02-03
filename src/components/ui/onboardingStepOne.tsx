@@ -181,7 +181,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                   UX/UI Design
                 </label>
               </div>
-              0
+              
             </div>
             <div>
               <div style={{ display: 'flex', height: '24px', width: '100%', fontSize: '16px', fontWeight: '700' }}>
