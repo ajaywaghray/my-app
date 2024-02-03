@@ -99,7 +99,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: '600', fontSize: '30px', marginTop: '16px' }}>
         Welcome to Quikest!
       </div>
-      <div style={{ display: 'flex', height: '50vh', justifyContent: 'center', alignItems: 'top', marginTop: '16px' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'top', marginTop: '16px', marginBottom: '16px' }}>
         <Card className="w-[700px]">
           <CardHeader>
           </CardHeader>
