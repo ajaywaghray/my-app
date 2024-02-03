@@ -167,10 +167,10 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
             </div>
           <div className="flex grid-cols-2 w-full h-6">
             <div style={{ display: 'flex', height: '24px', width: '100%', fontSize: '16px', fontWeight: '700' }}>
-              Whats your role?
+              What kind of work do you do?
             </div>
             <div style={{ display: 'flex', height: '24px', width: '100%', fontSize: '16px', fontWeight: '700' }}>
-              Whats your role?
+              What are your research goals?
             </div>
           </div>
           </CardContent>
