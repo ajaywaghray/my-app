@@ -183,82 +183,82 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="userresearch" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="uxuidesign"
+                  htmlFor="userresearch"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  UX/UI Design
+                  User Research
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="productmanagement" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="uxuidesign"
+                  htmlFor="productmanagement"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  UX/UI Design
+                  Product Management
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="engineering" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="uxuidesign"
+                  htmlFor="engineering"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  UX/UI Design
+                  Engineering
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="marketing" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="uxuidesign"
+                  htmlFor="marketing"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  UX/UI Design
+                  Marketing
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="sales" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="uxuidesign"
+                  htmlFor="sales"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  UX/UI Design
+                  Sales
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="businessanalysis" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="uxuidesign"
+                  htmlFor="businessanalysis"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  UX/UI Design
+                  Business Analysis
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="datascience" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="uxuidesign"
+                  htmlFor="datascience"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  UX/UI Design
+                  Data Science
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="contentstrategy" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="uxuidesign"
+                  htmlFor="contentstrategy"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  UX/UI Design
+                  Content Strategy
                 </label>
               </div>
               
