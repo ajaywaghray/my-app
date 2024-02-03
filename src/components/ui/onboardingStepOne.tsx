@@ -280,92 +280,92 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="understandcustomerfeedback" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="analyzeusertestingdata"
+                  htmlFor="understandcustomerfeedback"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Analyze user testing data
+                  Understand customer feedback
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="gatheruserfeedback" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="analyzeusertestingdata"
+                  htmlFor="gatheruserfeedback"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Analyze user testing data
+                  Gather user feedback
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="identifyuserpainpoints" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="analyzeusertestingdata"
+                  htmlFor="identifyuserpainpoints"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Analyze user testing data
+                  Identify user pain points
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="optimizeproductusability" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="analyzeusertestingdata"
+                  htmlFor="optimizeproductusability"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Analyze user testing data
+                  Optimize product usability
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="validateproductideas" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="analyzeusertestingdata"
+                  htmlFor="validateproductideas"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Analyze user testing data
+                  Validate product ideas
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="exploreuserbehavior" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="analyzeusertestingdata"
+                  htmlFor="exploreuserbehavior"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Analyze user testing data
+                  Explore user behavior
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="understanduserdemographics" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="analyzeusertestingdata"
+                  htmlFor="understanduserdemographics"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Analyze user testing data
+                  Understand user demographics
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="developusercenteredfeatures" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="analyzeusertestingdata"
+                  htmlFor="developusercenteredfeatures"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Analyze user testing data
+                  Develop user-centered features
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="other" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="analyzeusertestingdata"
+                  htmlFor="other"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Analyze user testing data
+                  Other
                 </label>
               </div>
 
