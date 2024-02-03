@@ -173,7 +173,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
               
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
-                <Checkbox id="other" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="uxuidesign"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -184,9 +184,21 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               
             </div>
             <div>
-              <div style={{ display: 'flex', height: '24px', width: '100%', fontSize: '16px', fontWeight: '700' }}>
+
+              <div className="flex w-full h-6" style={{ fontSize: '16px', fontWeight: '700' }}>
                 What are your research goals?
               </div>
+
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+                <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <label
+                  htmlFor="analyzeusertestingdata"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Analyze User Testing Data
+                </label>
+              </div>
+
             </div>
           </div>
           </CardContent>
