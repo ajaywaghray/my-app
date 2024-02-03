@@ -165,7 +165,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
             </div>
-          <div className="flex grid-cols-2 w-full h-6">
+          <div className="flex grid-cols-2 w-full">
             <div className="flex-col">
               
               <div className="flex w-full h-6" style={{ fontSize: '16px', fontWeight: '700' }}>
