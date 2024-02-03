@@ -172,7 +172,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 What kind of work do you do?
               </div>
               
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="uxuidesign"
@@ -182,7 +182,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="uxuidesign"
@@ -192,7 +192,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="uxuidesign"
@@ -202,7 +202,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="uxuidesign"
@@ -212,7 +212,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="uxuidesign"
@@ -222,7 +222,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="uxuidesign"
@@ -232,7 +232,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="uxuidesign"
@@ -242,7 +242,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="uxuidesign"
@@ -252,7 +252,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="uxuidesign"
@@ -269,7 +269,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 What are your research goals?
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="analyzeusertestingdata"
@@ -279,7 +279,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="analyzeusertestingdata"
@@ -289,7 +289,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="analyzeusertestingdata"
@@ -299,7 +299,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="analyzeusertestingdata"
@@ -309,7 +309,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="analyzeusertestingdata"
@@ -319,7 +319,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="analyzeusertestingdata"
@@ -329,7 +329,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="analyzeusertestingdata"
@@ -339,7 +339,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="analyzeusertestingdata"
@@ -349,7 +349,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="analyzeusertestingdata"
@@ -359,7 +359,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
 
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
                 <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="analyzeusertestingdata"
