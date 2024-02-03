@@ -165,7 +165,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </label>
               </div>
             </div>
-          <div className="flex grid-cols-2 ">
+          <div className="flex-1 grid-cols-2 ">
             <div style={{ display: 'flex', height: '24px', fontSize: '16px', fontWeight: '700' }}>
               Whats your role?
             </div>
