@@ -50,25 +50,15 @@ import {
 
 import { UserButton } from "@clerk/nextjs";
 
+import OnboardingHeaderComponent from "../common/onboardingHeader";
+
 const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
   // Add state management and form handling here
   const [state, setState] = React.useState();
 
   return (
     <main>
-    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'top', padding: '16px' }}>
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'left' }}>
-        <div style={{ display: 'flex', alignItems: 'top', height: '50px'}}>
-          <img src="/Quikest Logo.svg" alt="Image description" style={{ height: '32px', width: '32px', marginRight: '4px', marginTop: '4px' }} />
-          <div style={{ fontWeight: '700', fontSize: '24px' }}>
-            Quikest
-          </div>
-        </div>
-      </div>
-      <div style={{ flex: 1, display: 'flex', justifyContent: 'right', height: '50px' }}>
-        <div style={{ marginRight: '8px' }}><UserButton afterSignOutUrl="/"/></div>
-      </div>
-    </div>
+    <OnboardingHeaderComponent></OnboardingHeaderComponent>
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: '600', fontSize: '30px' }}>
       Welcome to Quikest!
     </div>
