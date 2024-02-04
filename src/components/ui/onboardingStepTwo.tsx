@@ -70,12 +70,15 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'top', marginTop: '16px', marginBottom: '16px' }}>
       <Card className="w-[700px]">
         <CardContent>
-        <div style={{ display: 'flex', height: '48px', justifyContent: 'space-between', alignItems: 'center' }}>
-          <div style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
-            Lets get to know you, Bonnie.
+          <div style={{ display: 'flex', height: '48px', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
+              Fine tuning Quikest to align with your venture
+            </div>
+            <Button onClick={onNext}>Analyze</Button>
           </div>
-          <Button onClick={onNext}>Analyze</Button>
-        </div>
+          <div style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
+            Simply enter your company website, and let Quikest do the magic of sourcing essential details to begin generating your personas and propel your research journey forward.
+          </div>
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
@@ -86,9 +89,6 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
             </div>
           </form>
         </CardContent>
-        <CardFooter className="flex justify-between">
-          <Button onClick={onNext}>Analyze</Button>
-        </CardFooter>
       </Card>
     </div>
   </main>
