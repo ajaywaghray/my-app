@@ -65,15 +65,17 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
     <main>
     <OnboardingHeaderComponent></OnboardingHeaderComponent>
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: '600', fontSize: '30px' }}>
-      Welcome to Quikest!
+      Set up your company profile
     </div>
-    <div style={{ display: 'flex', height: '50vh', justifyContent: 'center', alignItems: 'top', marginTop: '16px' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'top', marginTop: '16px', marginBottom: '16px' }}>
       <Card className="w-[700px]">
-        <CardHeader>
-          <CardTitle>Sign up or Login</CardTitle>
-          <CardDescription>Sign up or login to Quikest.</CardDescription>
-        </CardHeader>
         <CardContent>
+        <div style={{ display: 'flex', height: '48px', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
+            Lets get to know you, Bonnie.
+          </div>
+          <Button onClick={onNext}>Analyze</Button>
+        </div>
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
