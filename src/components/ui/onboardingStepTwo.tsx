@@ -76,7 +76,7 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
             </div>
             <Button onClick={onNext}>Analyze</Button>
           </div>
-          <div style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
+          <div className="text-zinc-500 text-xs" style={{ display: 'flex', justifyContent: 'left' }}>
             Simply enter your company website, and let Quikest do the magic of sourcing essential details to begin generating your personas and propel your research journey forward.
           </div>
           <form>
