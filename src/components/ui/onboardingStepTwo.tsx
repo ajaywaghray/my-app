@@ -79,15 +79,28 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
           <div className="text-zinc-500 text-sm font-normal" style={{ display: 'flex', justifyContent: 'left' }}>
             Simply enter your company website, and let Quikest do the magic of sourcing essential details to begin generating your personas and propel your research journey forward.
           </div>
-          <form>
-            <div className="grid w-full items-center gap-4">
-              <div className="flex flex-col space-y-1.5">
-                <Input id="email" placeholder="Step Two" />
+          
+          <div className="flex grid grid-cols-2 gap-4">
+            <form>
+              <div className="grid w-full items-center gap-4">
+                <div className="flex flex-col space-y-1.5">
+                  <Input id="email" placeholder="Step Two" />
+                </div>
+                <div className="flex flex-col space-y-1.5">
+                </div>
               </div>
-              <div className="flex flex-col space-y-1.5">
+            </form>
+            <form>
+              <div className="grid w-full items-center gap-4">
+                <div className="flex flex-col space-y-1.5">
+                  <Input id="email" placeholder="Step Two" />
+                </div>
+                <div className="flex flex-col space-y-1.5">
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
+          
         </CardContent>
       </Card>
     </div>
