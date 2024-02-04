@@ -84,7 +84,7 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
             <form>
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
-                  <Input id="email" placeholder="Step Two" />
+                  <Input id="email" placeholder="Company Name" />
                 </div>
                 <div className="flex flex-col space-y-1.5">
                 </div>
@@ -93,7 +93,7 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
             <form>
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
-                  <Input id="email" placeholder="Step Two" />
+                  <Input id="email" placeholder="Company Website" />
                 </div>
                 <div className="flex flex-col space-y-1.5">
                 </div>
@@ -101,6 +101,115 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
             </form>
           </div>
           
+          <div className="flex grid grid-cols-2 gap-4">
+          <div className="flex-col"> 
+              <div className="flex w-full h-6" style={{ fontSize: '16px', fontWeight: '700' }}>
+                What kind of work do you do?
+              </div>
+              
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
+                <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <label
+                  htmlFor="uxuidesign"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  UX/UI Design
+                </label>
+              </div>
+
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
+                <Checkbox id="userresearch" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <label
+                  htmlFor="userresearch"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  User Research
+                </label>
+              </div>
+
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
+                <Checkbox id="productmanagement" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <label
+                  htmlFor="productmanagement"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Product Management
+                </label>
+              </div>
+
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
+                <Checkbox id="engineering" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <label
+                  htmlFor="engineering"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Engineering
+                </label>
+              </div>
+
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
+                <Checkbox id="marketing" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <label
+                  htmlFor="marketing"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Marketing
+                </label>
+              </div>
+
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
+                <Checkbox id="sales" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <label
+                  htmlFor="sales"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Sales
+                </label>
+              </div>
+
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
+                <Checkbox id="businessanalysis" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <label
+                  htmlFor="businessanalysis"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Business Analysis
+                </label>
+              </div>
+
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
+                <Checkbox id="datascience" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <label
+                  htmlFor="datascience"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Data Science
+                </label>
+              </div>
+
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
+                <Checkbox id="contentstrategy" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <label
+                  htmlFor="contentstrategy"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Content Strategy
+                </label>
+              </div>
+
+              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
+                <Checkbox id="other" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <label
+                  htmlFor="other"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Other
+                </label>
+              </div>
+              
+            </div>
+          </div>
+
         </CardContent>
       </Card>
     </div>
