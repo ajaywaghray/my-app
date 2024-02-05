@@ -85,9 +85,9 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <SelectContent>
             <SelectGroup>
               <SelectLabel>Industry Served</SelectLabel>
-              <SelectItem value="apple">Web Design and Development</SelectItem>
-              <SelectItem value="banana">Customer Service</SelectItem>
-              <SelectItem value="blueberry">Business Consulting</SelectItem>
+              <SelectItem value="webdesignanddevelopment">Web Design and Development</SelectItem>
+              <SelectItem value="customerservice">Customer Service</SelectItem>
+              <SelectItem value="businessconsulting">Business Consulting</SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>
