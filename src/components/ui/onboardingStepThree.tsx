@@ -73,7 +73,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <Button onClick={onNext}>Done</Button>
         </div>
         <div className="text-zinc-500 text-sm font-normal" style={{ display: 'flex', justifyContent: 'left' }}>
-          Relume is fascinating! We've summarized their key aspects. Anything to tweak or add?
+          Relume is fascinating! We have summarized their key aspects. Anything to tweak or add?
         </div>
         
         <div className="flex w-full h-6" style={{ fontSize: '16px', fontWeight: '700' }}>
