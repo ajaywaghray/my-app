@@ -104,106 +104,76 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
           <div className="flex grid grid-cols-2 gap-4">
           <div className="flex-col"> 
               <div className="flex w-full h-6" style={{ fontSize: '16px', fontWeight: '700' }}>
-                What kind of work do you do?
+                Company Size
               </div>
               
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="soloentrepreneur" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="uxuidesign"
+                  htmlFor="soloentrepreneur"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  UX/UI Design
+                  Solo Entrepreneur
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="userresearch" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="micro" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="userresearch"
+                  htmlFor="micro"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  User Research
+                  Micro (1-10 employees)
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="productmanagement" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="small" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="productmanagement"
+                  htmlFor="small"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Product Management
+                  Small (11-50 employees)
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="engineering" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="medium" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="engineering"
+                  htmlFor="medium"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Engineering
+                  Medium (51-200 employees)
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="marketing" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="large" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="marketing"
+                  htmlFor="large"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Marketing
+                  Large (201-500 employees)
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="sales" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="enterprisesmall" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="sales"
+                  htmlFor="enterprisesmall"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Sales
+                  Enterprise (501-1000 employees)
                 </label>
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="businessanalysis" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox id="enterpriselarge" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
-                  htmlFor="businessanalysis"
+                  htmlFor="enterpriselarge"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Business Analysis
-                </label>
-              </div>
-
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="datascience" className="border-2 border-zinc-400 dark:border-zinc-500"/>
-                <label
-                  htmlFor="datascience"
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  Data Science
-                </label>
-              </div>
-
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="contentstrategy" className="border-2 border-zinc-400 dark:border-zinc-500"/>
-                <label
-                  htmlFor="contentstrategy"
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  Content Strategy
-                </label>
-              </div>
-
-              <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="other" className="border-2 border-zinc-400 dark:border-zinc-500"/>
-                <label
-                  htmlFor="other"
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  Other
+                  Enterprise (1001+ employees)
                 </label>
               </div>
               
