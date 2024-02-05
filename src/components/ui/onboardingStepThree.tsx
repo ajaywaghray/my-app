@@ -60,24 +60,54 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     <main>
     <OnboardingHeaderComponent></OnboardingHeaderComponent>
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: '600', fontSize: '30px' }}>
-      Welcome to Quikest!
+      Set Up Your Company Profile
     </div>
     <div style={{ display: 'flex', height: '50vh', justifyContent: 'center', alignItems: 'top', marginTop: '16px' }}>
       <Card className="w-[700px]">
-        <CardHeader>
-          <CardTitle>Sign up or Login</CardTitle>
-          <CardDescription>Sign up or login to Quikest.</CardDescription>
-        </CardHeader>
         <CardContent>
+
+        <div className="flex w-full h-6" style={{ fontSize: '16px', fontWeight: '700' }}>
+          Company Mission
+        </div>
+
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Input id="email" placeholder="Step Three" />
+                <Input id="email" placeholder="Company Mission" />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
             </div>
           </form>
+
+          <div className="flex w-full h-6" style={{ fontSize: '16px', fontWeight: '700' }}>
+            Product Description
+          </div>
+
+          <form>
+            <div className="grid w-full items-center gap-4">
+              <div className="flex flex-col space-y-1.5">
+                <Input id="email" placeholder="Product Description" />
+              </div>
+              <div className="flex flex-col space-y-1.5">
+              </div>
+            </div>
+          </form>
+
+          <div className="flex w-full h-6" style={{ fontSize: '16px', fontWeight: '700' }}>
+            Target Audience
+          </div>
+
+          <form>
+            <div className="grid w-full items-center gap-4">
+              <div className="flex flex-col space-y-1.5">
+                <Input id="email" placeholder="Target Audience" />
+              </div>
+              <div className="flex flex-col space-y-1.5">
+              </div>
+            </div>
+          </form>
+
         </CardContent>
         <CardFooter className="flex justify-between">
           <Button onClick={onNext}>Generate</Button>
