@@ -84,12 +84,10 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              <SelectLabel>Fruits</SelectLabel>
-              <SelectItem value="apple">Apple</SelectItem>
-              <SelectItem value="banana">Banana</SelectItem>
-              <SelectItem value="blueberry">Blueberry</SelectItem>
-              <SelectItem value="grapes">Grapes</SelectItem>
-              <SelectItem value="pineapple">Pineapple</SelectItem>
+              <SelectLabel>Industry Served</SelectLabel>
+              <SelectItem value="apple">Web Design and Development</SelectItem>
+              <SelectItem value="banana">Customer Service</SelectItem>
+              <SelectItem value="blueberry">Business Consulting</SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>
