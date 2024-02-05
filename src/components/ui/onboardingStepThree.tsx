@@ -66,6 +66,16 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
       <Card className="w-[700px]">
         <CardContent>
 
+        <div style={{ display: 'flex', height: '48px', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
+            Relume
+          </div>
+          <Button onClick={onNext}>Done</Button>
+        </div>
+        <div className="text-zinc-500 text-sm font-normal" style={{ display: 'flex', justifyContent: 'left' }}>
+          Relume is fascinating! We've summarized their key aspects. Anything to tweak or add?
+        </div>
+        
         <div className="flex w-full h-6" style={{ fontSize: '16px', fontWeight: '700' }}>
           Company Mission
         </div>
@@ -109,9 +119,6 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           </form>
 
         </CardContent>
-        <CardFooter className="flex justify-between">
-          <Button onClick={onNext}>Generate</Button>
-        </CardFooter>
       </Card>
     </div>
   </main>
