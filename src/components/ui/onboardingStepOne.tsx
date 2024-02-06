@@ -2,7 +2,7 @@
 
 import * as React from "react"
 
-import { GET } from '@/api/onboarding-step-one-store/route.ts';
+import { GET } from "@/api/onboarding/route.ts";
 
 import { useState } from 'react';
 
