@@ -2,6 +2,8 @@
 
 import * as React from "react"
 
+import { GET } from '@/api/onboarding-step-one-store/route.ts';
+
 import { useState } from 'react';
 
 import { Checkbox } from "@/components/ui/checkbox"
