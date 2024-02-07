@@ -27,6 +27,8 @@ export async function GET(request: NextRequest) {
   const selections = request.body;
   await storeSelections(selections);
 
+  console.log(selections);
+
   return NextResponse.json(
     {
       body: request.body,
