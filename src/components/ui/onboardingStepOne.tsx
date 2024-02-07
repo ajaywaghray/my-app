@@ -2,6 +2,8 @@
 
 import * as React from "react"
 
+import { FormEventHandler } from "react"
+
 import { GET } from '@/app/api/onboarding-step-one-store/route';
 
 import { useState } from 'react';
@@ -15,58 +17,15 @@ import { z } from "zod"
 
 import { toast } from "@/components/ui/use-toast"
 
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
-
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-
 import { Button } from "@/components/ui/button"
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-
-import { Input } from "@/components/ui/input"
-
-import { Label } from "@/components/ui/label"
 
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
 
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-} from "@/components/ui/form"
-
-import { UserButton } from "@clerk/nextjs";
 import OnboardingHeaderComponent from "../common/onboardingHeader";
 
 const FormSchema = z.object({
@@ -76,6 +35,20 @@ const FormSchema = z.object({
 const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   // Add state management and form handling here
   const [state, setState] = React.useState();
+  const [selectedCheckboxes, setSelectedCheckboxes] = useState<string[]>([]);
+
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+    setSelectedCheckboxes(prevState => {
+      if (prevState.includes(value)) {
+        // If the checkbox is already selected, remove it from the array
+        return prevState.filter(checkbox => checkbox !== value);
+      } else {
+        // If the checkbox is not selected, add it to the array
+        return [...prevState, value];
+      }
+    });
+  };
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -84,16 +57,16 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
     },
   })
  
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    })
-  }
+  const onSubmit = async (data: z.infer<typeof FormSchema>) => {
+    // Send the selected checkboxes to the API
+    const response = await fetch('/api/onboarding-step-one-store/route', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(selectedCheckboxes),
+    });
+  };
 
   return (
     <main>
@@ -110,7 +83,8 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               <div style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
                 Lets get to know you, Bonnie.
               </div>
-              <Button onClick={onNext}>Next</Button>
+
+              <Button onClick={onNext} onSubmit={onSubmit as FormEventHandler<HTMLButtonElement>}>Next</Button>
             </div>
             <div style={{ display: 'flex', height: '24px', fontSize: '16px', fontWeight: '700' }}>
               Whats your role?
