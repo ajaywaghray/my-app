@@ -4,6 +4,8 @@ import { NextResponse } from 'next/server';
 
 import type { NextRequest } from 'next/server';
 
+import { NextApiResponse, NextApiRequest } from 'next';
+
 import { Pool } from 'pg';
 
 const pool = new Pool({
@@ -22,22 +24,12 @@ async function storeSelections(selections: any) {
   }
 }
 
-export async function POST(request: NextRequest) {
-  
-  const selections = request.body;
-  await storeSelections(selections);
-
-  console.log(selections);
-
-  return NextResponse.json(
-    {
-      body: request.body,
-      path: request.nextUrl.pathname,
-      query: request.nextUrl.search,
-      cookies: request.cookies.getAll(),
-    },
-    {
-      status: 200,
-    },
-  );
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'POST') {
+    const selections = JSON.parse(req.body);
+    await storeSelections(selections);
+    res.status(200).json({ message: 'Success' });
+  } else {
+    res.status(405).json({ message: 'Method Not Allowed' });
+  }
 }
