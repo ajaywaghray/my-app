@@ -4,8 +4,6 @@ import * as React from "react"
 
 import { FormEventHandler } from "react"
 
-import { POST } from '@/app/api/onboarding-step-one-store/route';
-
 import { useState } from 'react';
 
 import { Checkbox } from "@/components/ui/checkbox"
@@ -14,8 +12,6 @@ import Link from "next/link"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-
-import { toast } from "@/components/ui/use-toast"
 
 import { Button } from "@/components/ui/button"
 
