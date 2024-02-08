@@ -33,17 +33,8 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   const [state, setState] = React.useState();
   const [selectedCheckboxes, setSelectedCheckboxes] = useState<string[]>([]);
 
-  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = event.target;
-    setSelectedCheckboxes(prevState => {
-      if (prevState.includes(value)) {
-        // If the checkbox is already selected, remove it from the array
-        return prevState.filter(checkbox => checkbox !== value);
-      } else {
-        // If the checkbox is not selected, add it to the array
-        return [...prevState, value];
-      }
-    });
+  const handleCheckboxChange = () =>{
+    console.log("The founder checkbox was checked")
   };
 
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -96,7 +87,11 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
             
             <div className="flex items-center space-x-2" style={{ padding: '8px' }}>
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>  
-                <Checkbox id="founder" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox 
+                    onChange={handleCheckboxChange} // Use onChange instead of onClick for checkboxes
+                    id="founder"
+                    value="founder" // Make sure to include a value prop className="border-2 border-zinc-400 dark:border-zinc-500"/
+                />
                 <label
                   htmlFor="founder"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 "
