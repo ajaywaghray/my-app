@@ -88,7 +88,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
             <div className="flex items-center space-x-2" style={{ padding: '8px' }}>
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>  
                 <Checkbox 
-                    onChange={handleCheckboxChange} // Use onChange instead of onClick for checkboxes
+                    onClick={handleCheckboxChange} // Use onChange instead of onClick for checkboxes
                     id="founder"
                     value="founder" // Make sure to include a value prop className="border-2 border-zinc-400 dark:border-zinc-500"/
                 />
