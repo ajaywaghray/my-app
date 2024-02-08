@@ -90,11 +90,11 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 <Checkbox 
                     onClick={handleCheckboxChange} // Use onChange instead of onClick for checkboxes
                     id="founder"
-                    value="founder" // Make sure to include a value prop className="border-2 border-zinc-400 dark:border-zinc-500"/
+                    value="founder" // Make sure to include a value prop 
+                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 "
                 />
                 <label
                   htmlFor="founder"
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 "
                 >
                   Founder
                 </label>
