@@ -57,7 +57,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
     },
   })
  
-  const onSubmit = async (data: z.infer<typeof FormSchema>) => {
+  const onSubmit = async () => {
     // Send the selected checkboxes to the API
     const response = await fetch('/api/onboarding-step-one-store/route', {
       method: 'POST',
@@ -84,7 +84,11 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 Lets get to know you, Bonnie.
               </div>
 
-              <Button onClick={onNext} onSubmit={onSubmit as FormEventHandler<HTMLButtonElement>}>Next</Button>
+              <Button onClick={async () => {
+                await onSubmit();
+                onNext();
+              }}>Next</Button>
+              
             </div>
             <div style={{ display: 'flex', height: '24px', fontSize: '16px', fontWeight: '700' }}>
               Whats your role?
