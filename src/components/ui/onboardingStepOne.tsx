@@ -4,7 +4,7 @@ import * as React from "react"
 
 import { FormEventHandler } from "react"
 
-import { GET } from '@/app/api/onboarding-step-one-store/route';
+import { POST } from '@/app/api/onboarding-step-one-store/route';
 
 import { useState } from 'react';
 
@@ -88,7 +88,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 await onSubmit();
                 onNext();
               }}>Next</Button>
-              
+
             </div>
             <div style={{ display: 'flex', height: '24px', fontSize: '16px', fontWeight: '700' }}>
               Whats your role?

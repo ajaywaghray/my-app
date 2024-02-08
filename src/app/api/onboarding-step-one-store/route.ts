@@ -22,7 +22,7 @@ async function storeSelections(selections: any) {
   }
 }
 
-export async function GET(request: NextRequest) {
+export async function POST(request: NextRequest) {
   
   const selections = request.body;
   await storeSelections(selections);
