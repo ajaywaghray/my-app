@@ -16,6 +16,8 @@ const pool = new Pool({
 });
 
 async function storeSelections(selections: any) {
+  console.log("storeSelections function called");
+  
   const client = await pool.connect();
   try {
     await client.query('INSERT INTO selections VALUES ($1)', [selections]);
@@ -25,7 +27,7 @@ async function storeSelections(selections: any) {
 }
 
 export async function POST (request: Request) {
-  console.log("POST function called")
+  console.log("POST function called");
 
   // Receive array of what do you do inputs
   const { selections } = await request.json();
