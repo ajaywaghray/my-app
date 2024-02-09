@@ -31,9 +31,25 @@ const FormSchema = z.object({
 const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   // Add state management and form handling here
   const [state, setState] = React.useState();
-  const [selectedCheckboxes, setSelectedCheckboxes] = useState<string[]>([]);
+  const [founderChecked, setFounderChecked] = useState(false); 
+  const [selectedCheckboxesRole, setSelectedCheckboxesRole] = useState<string[]>([]);
+  const [selectedCheckboxesWork, setSelectedCheckboxesWork] = useState<string[]>([]);
+  const [selectedCheckboxesGoals, setSelectedCheckboxesGoals] = useState<string[]>([]);
 
-  const handleCheckboxChange = () =>{
+  const handleCheckboxChangeFounder = () =>{
+    setFounderChecked(!founderChecked);
+    console.log(founderChecked); 
+  };
+  
+  const handleCheckboxChangeRole = () =>{
+    console.log("The founder checkbox was checked")
+  };
+
+  const handleCheckboxChangeWork = () =>{
+    console.log("The founder checkbox was checked")
+  };
+
+  const handleCheckboxChangeGoals = () =>{
     console.log("The founder checkbox was checked")
   };
 
@@ -48,7 +64,9 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
     // Send the selected checkboxes to the API
     
     console.log("Made it to onSubmit! Sending POST request");
-    console.log(selectedCheckboxes);
+    console.log(selectedCheckboxesRole);
+    console.log(selectedCheckboxesWork);
+    console.log(selectedCheckboxesGoals);
     
     /* const response = await fetch('/api/onboarding-step-one-store/route', {
       method: 'POST',
@@ -88,13 +106,14 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
             <div className="flex items-center space-x-2" style={{ padding: '8px' }}>
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>  
                 <Checkbox 
-                    onClick={handleCheckboxChange} // Use onChange instead of onClick for checkboxes
+                    onClick={handleCheckboxChangeFounder}
                     id="founder"
                     value="founder" // Make sure to include a value prop 
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 "
+                    className="border-2 border-zinc-400 dark:border-zinc-500"
                 />
                 <label
                   htmlFor="founder"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
                   Founder
                 </label>
