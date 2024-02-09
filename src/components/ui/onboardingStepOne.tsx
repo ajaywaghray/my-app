@@ -33,11 +33,11 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   const [state, setState] = React.useState();
 
   // What do you do checkbox states are here
-  const [founderChecked, setFounderChecked] = useState(true);
-  const [clevelChecked, setClevelChecked] = useState(true); 
-  const [teamLeadChecked, setTeamLeadChecked] = useState(true); 
-  const [icChecked, setICChecked] = useState(true); 
-  const [doOtherChecked, setDoOtherChecked] = useState(true); 
+  const [founderChecked, setFounderChecked] = useState(false);
+  const [clevelChecked, setClevelChecked] = useState(false); 
+  const [teamLeadChecked, setTeamLeadChecked] = useState(false); 
+  const [icChecked, setICChecked] = useState(false); 
+  const [doOtherChecked, setDoOtherChecked] = useState(false); 
 
   // What do you do checkbox handlers
   const handleCheckboxChangeFounder = () =>{
