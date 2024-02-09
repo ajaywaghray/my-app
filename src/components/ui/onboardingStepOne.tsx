@@ -69,17 +69,37 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   })
  
   const onSubmit = async () => {
-    // Send the selected checkboxes to the API
+    // Create array selectedCheckboxes that stores all the selected checkboxes
+    const selectedDoCheckboxes: string[] = [];
+
+    // Conditional statements that check each state to see if the checkbox is checked, if true add to selected array
+    if(founderChecked){
+      selectedDoCheckboxes.push("founder");
+    }
+    if(clevelChecked){
+      selectedDoCheckboxes.push("clevel");
+    }
+    if(teamLeadChecked){
+      selectedDoCheckboxes.push("teamlead");
+    }
+    if(icChecked){
+      selectedDoCheckboxes.push("ic");
+    }
+    if(doOtherChecked){
+      selectedDoCheckboxes.push("other");
+    }
     
+    console.log(selectedDoCheckboxes);
     console.log("Made it to onSubmit! Sending POST request");
     
-    /* const response = await fetch('/api/onboarding-step-one-store/route', {
+    // Send the selected checkboxes to the API
+    /*const response = await fetch('/api/onboarding-step-one-store/route', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(selectedCheckboxes),
-    }); */
+      body: JSON.stringify(selectedDoCheckboxes),
+    });*/
   };
 
   return (

@@ -23,3 +23,17 @@ async function storeSelections(selections: any) {
     client.release();
   }
 }
+
+export async function POST (request: Request) {
+  console.log("POST function called")
+
+  // Receive array of what do you do inputs
+  const { selections } = await request.json();
+
+  // Store the selections in the database against the new user ID and create a new workspace ID to store in the database
+  await storeSelections(selections);
+
+  // Return a response that the selections have been stored
+  return new Response('Selections stored', { status: 200 });
+
+}
