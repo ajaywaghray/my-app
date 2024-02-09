@@ -32,25 +32,10 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   // Add state management and form handling here
   const [state, setState] = React.useState();
   const [founderChecked, setFounderChecked] = useState(true); 
-  const [selectedCheckboxesRole, setSelectedCheckboxesRole] = useState<string[]>([]);
-  const [selectedCheckboxesWork, setSelectedCheckboxesWork] = useState<string[]>([]);
-  const [selectedCheckboxesGoals, setSelectedCheckboxesGoals] = useState<string[]>([]);
 
   const handleCheckboxChangeFounder = () =>{
     setFounderChecked(!founderChecked);
     console.log(founderChecked); 
-  };
-  
-  const handleCheckboxChangeRole = () =>{
-    console.log("The founder checkbox was checked")
-  };
-
-  const handleCheckboxChangeWork = () =>{
-    console.log("The founder checkbox was checked")
-  };
-
-  const handleCheckboxChangeGoals = () =>{
-    console.log("The founder checkbox was checked")
   };
 
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -64,9 +49,6 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
     // Send the selected checkboxes to the API
     
     console.log("Made it to onSubmit! Sending POST request");
-    console.log(selectedCheckboxesRole);
-    console.log(selectedCheckboxesWork);
-    console.log(selectedCheckboxesGoals);
     
     /* const response = await fetch('/api/onboarding-step-one-store/route', {
       method: 'POST',
