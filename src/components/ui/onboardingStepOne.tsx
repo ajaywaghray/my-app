@@ -91,14 +91,16 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
     
     console.log(selectedDoCheckboxes);
     console.log("Made it to onSubmit! Sending POST request");
+
+    
     
     // Send the selected checkboxes to the API
-    const response = await fetch('/api/onboarding-step-one-store/route', {
+    const response = await fetch('/api/onboarding-step-one-store', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(selectedDoCheckboxes),
+      body: JSON.stringify({ selections: selectedDoCheckboxes }),
     });
   };
 

@@ -26,7 +26,7 @@ async function storeSelections(selections: any) {
   }
 }
 
-export default async function POST (request: Request) {
+export async function POST (request: Request) {
   console.log("POST function called");
 
   // Receive array of what do you do inputs
