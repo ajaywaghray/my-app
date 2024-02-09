@@ -31,7 +31,7 @@ const FormSchema = z.object({
 const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   // Add state management and form handling here
   const [state, setState] = React.useState();
-  const [founderChecked, setFounderChecked] = useState(false); 
+  const [founderChecked, setFounderChecked] = useState(true); 
   const [selectedCheckboxesRole, setSelectedCheckboxesRole] = useState<string[]>([]);
   const [selectedCheckboxesWork, setSelectedCheckboxesWork] = useState<string[]>([]);
   const [selectedCheckboxesGoals, setSelectedCheckboxesGoals] = useState<string[]>([]);
