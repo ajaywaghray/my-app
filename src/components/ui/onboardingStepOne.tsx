@@ -31,13 +31,36 @@ const FormSchema = z.object({
 const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   // Add state management and form handling here
   const [state, setState] = React.useState();
-  const [founderChecked, setFounderChecked] = useState(true); 
 
+  // What do you do checkbox states are here
+  const [founderChecked, setFounderChecked] = useState(true);
+  const [clevelChecked, setClevelChecked] = useState(true); 
+  const [teamLeadChecked, setTeamLeadChecked] = useState(true); 
+  const [icChecked, setICChecked] = useState(true); 
+  const [doOtherChecked, setDoOtherChecked] = useState(true); 
+
+  // What do you do checkbox handlers
   const handleCheckboxChangeFounder = () =>{
-    setFounderChecked(!founderChecked);
-    console.log(founderChecked); 
+    setFounderChecked(!founderChecked); 
   };
 
+  const handleCheckboxChangeClevel = () =>{
+    setClevelChecked(!clevelChecked); 
+  };
+
+  const handleCheckboxChangeTeamLead = () =>{
+    setTeamLeadChecked(!teamLeadChecked); 
+  };
+
+  const handleCheckboxChangeIC = () =>{
+    setICChecked(!icChecked); 
+  };
+
+  const handleCheckboxChangeDoOther = () =>{
+    setDoOtherChecked(!doOtherChecked); 
+  };
+
+  // form handling? Not sure what this is for
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -90,7 +113,6 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 <Checkbox 
                     onClick={handleCheckboxChangeFounder}
                     id="founder"
-                    value="founder" // Make sure to include a value prop 
                     className="border-2 border-zinc-400 dark:border-zinc-500"
                 />
                 <label
@@ -102,7 +124,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
-                <Checkbox id="clevel" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeClevel} id="clevel" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="clevel"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -112,7 +134,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
-                <Checkbox id="teamlead" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeTeamLead} id="teamlead" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="teamlead"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -122,7 +144,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 </div>
             
                 <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>    
-                <Checkbox id="ic" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeIC} id="ic" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="ic"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -132,7 +154,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
             
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px' }}>      
-                <Checkbox id="other" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeDoOther} id="other" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="other"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
