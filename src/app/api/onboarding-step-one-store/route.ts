@@ -12,11 +12,6 @@ async function storeSelections(selections: any) {
 
 }
 
-try {
-  const result =
-    await sql`CREATE TABLE Quikest ( WorkspaceID varchar(255), UserID varchar(255), OnboardingStepOne varchar(255) );`;
-}
-
 export async function POST (request: Request) {
   console.log("POST function called");
 
