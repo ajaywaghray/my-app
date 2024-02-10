@@ -19,8 +19,8 @@ export async function POST (request: Request) {
   const createTable = await sql`
     CREATE TABLE IF NOT EXISTS quikest (
       workspace_id SERIAL PRIMARY KEY,
-      user_id INT,
-      onboarding_step_one STRING
+      user_id VARCHAR(255) NOT NULL,
+      onboarding_step_one VARCHAR(255),
     );
   `;
 
