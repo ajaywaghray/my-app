@@ -19,11 +19,14 @@ async function storeSelections(selections: any) {
   console.log("storeSelections function called");
   
   const client = await pool.connect();
-  try {
-    await client.query('INSERT INTO selections VALUES ($1)', [selections]);
-  } finally {
-    client.release();
-  }
+
+  console.log("Connected to database");
+  
+  // Add row to database with a randomly generated workspace ID, the user's ID from Clerk, and the selections
+  const res = await client.query('INSERT INTO selections VALUES ($1)', [selections]);
+  console.log(res);
+  client.release();
+
 }
 
 export async function POST (request: Request) {
