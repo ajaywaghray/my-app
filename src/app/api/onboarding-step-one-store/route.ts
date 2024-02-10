@@ -6,31 +6,30 @@ import type { NextRequest } from 'next/server';
 
 import { NextApiResponse, NextApiRequest } from 'next';
 
-import { Pool } from 'pg';
-
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
-
 async function storeSelections(selections: any) {
+  
   console.log("storeSelections function called");
-  
-  const client = await pool.connect();
 
-  console.log("Connected to database");
-  
-  // Add row to database with a randomly generated workspace ID, the user's ID from Clerk, and the selections
-  const res = await client.query('INSERT INTO selections VALUES ($1)', [selections]);
-  console.log(res);
-  client.release();
+}
 
+try {
+  const result =
+    await sql`CREATE TABLE Quikest ( WorkspaceID varchar(255), UserID varchar(255), OnboardingStepOne varchar(255) );`;
 }
 
 export async function POST (request: Request) {
   console.log("POST function called");
+
+  //Create a table if none exists
+  const createTable = await sql`
+    CREATE TABLE IF NOT EXISTS quikest (
+      workspace_id SERIAL PRIMARY KEY,
+      user_id INT,
+      onboarding_step_one STRING
+    );
+  `;
+
+  console.log("Table possibly created");
 
   // Receive array of what do you do inputs
   const { selections } = await request.json();
@@ -41,4 +40,8 @@ export async function POST (request: Request) {
   // Return a response that the selections have been stored
   return new Response('Selections stored', { status: 200 });
 
+}
+
+export async function GET(request: Request) {
+  
 }
