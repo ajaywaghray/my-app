@@ -20,7 +20,7 @@ export async function POST (request: Request) {
     CREATE TABLE IF NOT EXISTS quikest (
       workspace_id SERIAL PRIMARY KEY,
       user_id VARCHAR(255) NOT NULL,
-      onboarding_step_one VARCHAR(255),
+      onboarding_step_one VARCHAR(255)
     );
   `;
 
