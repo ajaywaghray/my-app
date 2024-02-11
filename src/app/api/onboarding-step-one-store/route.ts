@@ -10,6 +10,9 @@ async function storeSelections(selections: any) {
   
   console.log("storeSelections function called");
 
+  // Store selections from onboarding in database
+  
+
 }
 
 export async function POST (request: Request) {
