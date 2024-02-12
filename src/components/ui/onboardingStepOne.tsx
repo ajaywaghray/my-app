@@ -23,6 +23,8 @@ import {
 } from "@/components/ui/card"
 
 import OnboardingHeaderComponent from "../common/onboardingHeader";
+import { randomInt } from "crypto";
+import { currentUser } from "@clerk/nextjs";
 
 const FormSchema = z.object({
   mobile: z.boolean().default(false).optional(),
@@ -72,6 +74,13 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
     // Create array selectedCheckboxes that stores all the selected checkboxes
     const selectedDoCheckboxes: string[] = [];
 
+    //Create constant for Clerk User ID
+    const UserId = currentUser();
+
+    console.log(UserId);
+
+    const WorkspaceId = randomInt(1, 1000000000);
+
     // Conditional statements that check each state to see if the checkbox is checked, if true add to selected array
     if(founderChecked){
       selectedDoCheckboxes.push("founder");
@@ -98,7 +107,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ selections: selectedDoCheckboxes }),
+      body: JSON.stringify({workspace_id: WorkspaceId, user_id: UserId, selections: selectedDoCheckboxes }),
     });
   };
 
