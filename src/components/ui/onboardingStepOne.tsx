@@ -80,7 +80,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
 
     console.log(userId);
 
-    const WorkspaceId = randomInt(1, 1000000000);
+    const WorkspaceId = Math.floor(Math.random() * (100000 - 2 + 1)) + 2;
 
     // Conditional statements that check each state to see if the checkbox is checked, if true add to selected array
     if(founderChecked){
