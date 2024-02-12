@@ -6,7 +6,7 @@ import type { NextRequest } from 'next/server';
 
 import { NextApiResponse, NextApiRequest } from 'next';
 
-async function storeSelections(selections: any) {
+async function storeSelections(workspace_id: any, user_id: any, selections: any) {
   
   console.log("storeSelections function called");
 
@@ -39,7 +39,7 @@ export async function POST (request: Request) {
   const { selections } = await request.json();
 
   // Store the selections in the database against the new user ID and create a new workspace ID to store in the database
-  await storeSelections(selections);
+  await storeSelections(selections, selections, selections);
 
   // Return a response that the selections have been stored
   return new Response('Selections stored', { status: 200 });
