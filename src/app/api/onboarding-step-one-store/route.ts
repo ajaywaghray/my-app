@@ -12,10 +12,11 @@ async function storeSelections(workspace_id: any, user_id: any, selections: any)
 
   // Store selections from onboarding in database
   try {
+    console.log("Starting SQL query to store selections in database");
     await sql`INSERT INTO quikest (workspace_id, user_id, onboarding_step_one) VALUES (${workspace_id}, ${user_id}, ${selections});`;
   } catch (error) {
-    return NextResponse.json({ error }, { status: 500 });
     console.log("Selections not stored in database due to error: " + error);
+    return NextResponse.json({ error }, { status: 500 });
   }
   
   console.log("Selections stored in database");
