@@ -1,5 +1,7 @@
 'use client'
 
+import { useAuth } from "@clerk/nextjs";
+
 import * as React from "react"
 
 import { FormEventHandler } from "react"
@@ -75,9 +77,9 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
     const selectedDoCheckboxes: string[] = [];
 
     //Create constant for Clerk User ID
-    const UserId = currentUser();
+    const { isLoaded, userId, sessionId, getToken } = useAuth();
 
-    console.log(UserId);
+    console.log(userId);
 
     const WorkspaceId = randomInt(1, 1000000000);
 
@@ -107,7 +109,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({workspace_id: WorkspaceId, user_id: UserId, selections: selectedDoCheckboxes }),
+      body: JSON.stringify({workspace_id: WorkspaceId, user_id: userId, selections: selectedDoCheckboxes }),
     });
   };
 
