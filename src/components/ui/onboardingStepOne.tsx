@@ -35,6 +35,8 @@ const FormSchema = z.object({
 const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   // Add state management and form handling here
   const [state, setState] = React.useState();
+  //Create constant for Clerk User ID
+  const { isLoaded, userId, sessionId, getToken } = useAuth();
 
   // What do you do checkbox states are here
   const [founderChecked, setFounderChecked] = useState(false);
@@ -75,9 +77,6 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   const onSubmit = async () => {
     // Create array selectedCheckboxes that stores all the selected checkboxes
     const selectedDoCheckboxes: string[] = [];
-
-    //Create constant for Clerk User ID
-    const { isLoaded, userId, sessionId, getToken } = useAuth();
 
     console.log(userId);
 
