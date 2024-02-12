@@ -11,7 +11,13 @@ async function storeSelections(selections: any) {
   console.log("storeSelections function called");
 
   // Store selections from onboarding in database
+  try {
+    await sql`INSERT INTO quikest (Name, Owner) VALUES (${workspace_id}, ${user_id}, ${selections});`;
+  } catch (error) {
+    return NextResponse.json({ error }, { status: 500 });
+  }
   
+  console.log("Selections stored in database");
 
 }
 
@@ -27,7 +33,7 @@ export async function POST (request: Request) {
     );
   `;
 
-  console.log("Table possibly created");
+  console.log("Table created if there wasn't one already");
 
   // Receive array of what do you do inputs
   const { selections } = await request.json();
