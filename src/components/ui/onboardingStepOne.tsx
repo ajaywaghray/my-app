@@ -79,6 +79,9 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
     // Create array selectedCheckboxes that stores all the selected checkboxes
     const selectedDoCheckboxes: string[] = [];
 
+    //Create random workspace ID
+    const workspaceId = Math.floor(Math.random() * (100000000 - 2 + 1)) + 2;
+
     console.log(userId);
     console.log(orgId);
 
@@ -108,7 +111,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({workspace_id: userId, user_id: userId, user_email_address: userId, selections: selectedDoCheckboxes }),
+      body: JSON.stringify({workspace_id: workspaceId, user_id: userId, user_email_address: userId, selections: selectedDoCheckboxes }),
     });
   };
 
