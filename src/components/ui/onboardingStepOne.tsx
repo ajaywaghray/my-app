@@ -2,6 +2,8 @@
 
 import { useAuth } from "@clerk/nextjs";
 
+import { useUser } from "@clerk/nextjs";
+
 import * as React from "react"
 
 import { FormEventHandler } from "react"
@@ -38,6 +40,11 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   
   //Create constant for Clerk User ID
   const { isLoaded, orgId, userId, sessionId, getToken } = useAuth();
+
+  // Create constant for Clerk user object
+  const { user } = useUser();
+
+  let userEmailAddress: string | null | undefined;
 
   // What do you do checkbox states are here
   const [founderChecked, setFounderChecked] = useState(false);
@@ -82,8 +89,14 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
     //Create random workspace ID
     const workspaceId = Math.floor(Math.random() * (100000000 - 2 + 1)) + 2;
 
+    if (user) {
+      userEmailAddress = user.primaryEmailAddress?.emailAddress;
+      console.log(userEmailAddress);
+    }
+
     console.log(userId);
-    console.log(orgId);
+    console.log(workspaceId);
+    
 
     // Conditional statements that check each state to see if the checkbox is checked, if true add to selected array
     if(founderChecked){
@@ -111,7 +124,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({workspace_id: workspaceId, user_id: userId, user_email_address: userId, selections: selectedDoCheckboxes }),
+      body: JSON.stringify({workspace_id: workspaceId, user_id: userId, user_email_address: userEmailAddress, selections: selectedDoCheckboxes }),
     });
   };
 
