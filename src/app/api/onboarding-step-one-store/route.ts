@@ -13,7 +13,7 @@ async function storeSelections(workspace_id: any, user_id: any, selections: any)
   // Store selections from onboarding in database
   try {
     console.log("Starting SQL query to store selections in database");
-    await sql`INSERT INTO quikest (workspace_id, user_id, onboarding_step_one) VALUES (${workspace_id}, ${user_id}, ${selections});`;
+    await sql`INSERT INTO quikest (workspace_id, user_id, onboarding_step_one) VALUES (1, 1, ${selections});`;
   } catch (error) {
     console.log("Selections not stored in database due to error: " + error);
     return NextResponse.json({ error }, { status: 500 });
@@ -37,6 +37,8 @@ export async function POST (request: Request) {
 
   console.log("Table created if there wasn't one already");
 
+  
+  
   // Receive array of what do you do inputs
   const { selections } = await request.json();
 
