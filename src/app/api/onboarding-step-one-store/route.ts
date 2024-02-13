@@ -39,10 +39,10 @@ export async function POST (request: Request) {
   console.log("Table created if there wasn't one already");
 
   // Receive array of what do you do inputs
-  const { selections } = await request.json();
+  const { workspace_id, user_id, user_email_address, selections } = await request.json();
 
   // Store the selections in the database against the new user ID and create a new workspace ID to store in the database
-  await storeSelections(selections, selections, selections, selections);
+  await storeSelections(workspace_id, user_id, user_email_address, selections);
 
   // Return a response that the selections have been stored
   return new Response('Selections stored', { status: 200 });

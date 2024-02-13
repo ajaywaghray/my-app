@@ -108,7 +108,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({workspace_id: orgId, user_id: userId, selections: selectedDoCheckboxes }),
+      body: JSON.stringify({workspace_id: userId, user_id: userId, user_email_address: userId, selections: selectedDoCheckboxes }),
     });
   };
 
