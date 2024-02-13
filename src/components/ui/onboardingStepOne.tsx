@@ -35,8 +35,9 @@ const FormSchema = z.object({
 const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   // Add state management and form handling here
   const [state, setState] = React.useState();
+  
   //Create constant for Clerk User ID
-  const { isLoaded, userId, sessionId, getToken } = useAuth();
+  const { isLoaded, orgId, userId, sessionId, getToken } = useAuth();
 
   // What do you do checkbox states are here
   const [founderChecked, setFounderChecked] = useState(false);
@@ -79,8 +80,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
     const selectedDoCheckboxes: string[] = [];
 
     console.log(userId);
-
-    const WorkspaceId = Math.floor(Math.random() * (100000 - 2 + 1)) + 2;
+    console.log(orgId);
 
     // Conditional statements that check each state to see if the checkbox is checked, if true add to selected array
     if(founderChecked){
@@ -108,7 +108,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({workspace_id: WorkspaceId, user_id: userId, selections: selectedDoCheckboxes }),
+      body: JSON.stringify({workspace_id: orgId, user_id: userId, selections: selectedDoCheckboxes }),
     });
   };
 

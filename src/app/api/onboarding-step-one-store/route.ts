@@ -26,11 +26,17 @@ async function storeSelections(workspace_id: any, user_id: any, selections: any)
 export async function POST (request: Request) {
   console.log("POST function called");
 
+  //Delete existing quikest table
+  const deleteTable = await sql`
+    DROP TABLE IF EXISTS quikest;
+  `;
+  
   //Create a table if none exists
   const createTable = await sql`
     CREATE TABLE IF NOT EXISTS quikest (
-      workspace_id SERIAL PRIMARY KEY,
+      workspace_id VARCHAR(255) NOT NULL,
       user_id VARCHAR(255) NOT NULL,
+      user_email_address VARCHAR(255) NOT NULL,
       onboarding_step_one VARCHAR(255)
     );
   `;
