@@ -365,7 +365,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
               
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeUiux} id="uiuxdesign" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="uxuidesign"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -375,7 +375,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="userresearch" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeUserResearch} id="userresearch" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="userresearch"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -385,7 +385,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="productmanagement" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeProductManagement} id="productmanagement" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="productmanagement"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -395,7 +395,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="engineering" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeEngineering} id="engineering" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="engineering"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -405,7 +405,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="marketing" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeMarketing} id="marketing" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="marketing"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -415,7 +415,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="sales" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeSales} id="sales" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="sales"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -425,7 +425,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="businessanalysis" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeBusinessAnalysis} id="businessanalysis" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="businessanalysis"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -435,7 +435,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="datascience" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeDataScience} id="datascience" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="datascience"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -445,7 +445,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="contentstrategy" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeContentStrategy} id="contentstrategy" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="contentstrategy"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -455,7 +455,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="other" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeWorkOther} id="other" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="other"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -472,7 +472,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeAnalyzeUserTestingData} id="analyzeusertestingdata" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="analyzeusertestingdata"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -482,7 +482,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="understandcustomerfeedback" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeUnderstandCustomerFeedback} id="understandcustomerfeedback" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="understandcustomerfeedback"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -492,7 +492,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="gatheruserfeedback" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeGatherUserFeedback} id="gatheruserfeedback" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="gatheruserfeedback"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -502,7 +502,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="identifyuserpainpoints" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeIdentifyUserPainPoints} id="identifyuserpainpoints" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="identifyuserpainpoints"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -512,7 +512,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="optimizeproductusability" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeOptimizeProductUsability} id="optimizeproductusability" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="optimizeproductusability"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -522,7 +522,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="validateproductideas" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeValidateProductIdeas} id="validateproductideas" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="validateproductideas"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -532,7 +532,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="exploreuserbehavior" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeExploreUserBehavior} id="exploreuserbehavior" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="exploreuserbehavior"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -542,7 +542,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="understanduserdemographics" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeUnderstandUserDemographics} id="understanduserdemographics" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="understanduserdemographics"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -552,7 +552,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="developusercenteredfeatures" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeDevelopUserCenteredFeatures} id="developusercenteredfeatures" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="developusercenteredfeatures"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -562,7 +562,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               </div>
 
               <div className="flex items-center space-x-2 border-2 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-100 dark:hover:bg-zinc-900 rounded-lg" style={{ padding: '8px', marginTop: '8px' }}>      
-                <Checkbox id="other" className="border-2 border-zinc-400 dark:border-zinc-500"/>
+                <Checkbox onClick={handleCheckboxChangeGoalsOther} id="other" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="other"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
