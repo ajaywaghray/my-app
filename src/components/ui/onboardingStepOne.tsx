@@ -46,14 +46,38 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
 
   let userEmailAddress: string | null | undefined;
 
-  // What do you do checkbox states are here
+  // ************ What do you do checkbox states are here *****************
   const [founderChecked, setFounderChecked] = useState(false);
   const [clevelChecked, setClevelChecked] = useState(false); 
   const [teamLeadChecked, setTeamLeadChecked] = useState(false); 
   const [icChecked, setICChecked] = useState(false); 
   const [doOtherChecked, setDoOtherChecked] = useState(false); 
 
-  // What do you do checkbox handlers
+  // ************ Work checkbox states are here *****************
+  const [uiuxChecked, setUiuxChecked] = useState(false);
+  const [userResearchChecked, setUserResearchChecked] = useState(false);
+  const [productManagementChecked, setProductManagementChecked] = useState(false);
+  const [engineeringChecked, setEngineeringChecked] = useState(false);
+  const [marketingChecked, setMarketingChecked] = useState(false);
+  const [salesChecked, setSalesChecked] = useState(false);
+  const [businessAnalysisChecked, setBusinessAnalysisChecked] = useState(false);
+  const [dataScienceChecked, setDataScienceChecked] = useState(false);
+  const [contentStrategyChecked, setContentStrategyChecked] = useState(false);
+  const [workOtherChecked, setWorkOtherChecked] = useState(false);
+
+   // ************ Goals checkbox states are here *****************
+  const [analyzeUserTestingDataChecked, setAnalyzeUserTestingDataChecked] = useState(false);
+  const [understandCustomerFeedbackChecked, setUnderstandCustomerFeedbackChecked] = useState(false);
+  const [gatherUserFeedbackChecked, setGatherUserFeedbackChecked] = useState(false);
+  const [identifyUserPainPointsChecked, setIdentifyUserPainPointsChecked] = useState(false);
+  const [optimizeProductUsabilityChecked, setOptimizeProductUsabilityChecked] = useState(false);
+  const [validateProductIdeasChecked, setValidateProductIdeasChecked] = useState(false);
+  const [exploreUserBehaviorChecked, setExploreUserBehaviorChecked] = useState(false);
+  const [understandUserDemographicsChecked, setUnderstandUserDemographicsChecked] = useState(false);
+  const [developUserCenteredFeaturesChecked, setDevelopUserCenteredFeaturesChecked] = useState(false);
+  const [goalsOtherChecked, setGoalsOtherChecked] = useState(false);
+
+  // **************** What do you do checkbox handlers ********************
   const handleCheckboxChangeFounder = () =>{
     setFounderChecked(!founderChecked); 
   };
@@ -74,6 +98,70 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
     setDoOtherChecked(!doOtherChecked); 
   };
 
+  // **************** Work checkbox handlers ********************
+  const handleCheckboxChangeUiux = () =>{
+    setUiuxChecked(!uiuxChecked); 
+  };
+  const handleCheckboxChangeUserResearch = () =>{
+    setUserResearchChecked(!userResearchChecked); 
+  }
+  const handleCheckboxChangeProductManagement = () =>{
+    setProductManagementChecked(!productManagementChecked); 
+  }
+  const handleCheckboxChangeEngineering = () =>{
+    setEngineeringChecked(!engineeringChecked); 
+  }
+  const handleCheckboxChangeMarketing = () =>{
+    setMarketingChecked(!marketingChecked); 
+  }
+  const handleCheckboxChangeSales = () =>{
+    setSalesChecked(!salesChecked); 
+  }
+  const handleCheckboxChangeBusinessAnalysis = () =>{
+    setBusinessAnalysisChecked(!businessAnalysisChecked); 
+  }
+  const handleCheckboxChangeDataScience = () =>{
+    setDataScienceChecked(!dataScienceChecked); 
+  }
+  const handleCheckboxChangeContentStrategy = () =>{
+    setContentStrategyChecked(!contentStrategyChecked); 
+  }
+  const handleCheckboxChangeWorkOther = () =>{
+    setWorkOtherChecked(!workOtherChecked); 
+  }
+
+  // **************** Goals checkbox handlers ********************
+  const handleCheckboxChangeAnalyzeUserTestingData = () =>{
+    setAnalyzeUserTestingDataChecked(!analyzeUserTestingDataChecked); 
+  }
+  const handleCheckboxChangeUnderstandCustomerFeedback = () =>{
+    setUnderstandCustomerFeedbackChecked(!understandCustomerFeedbackChecked); 
+  }
+  const handleCheckboxChangeGatherUserFeedback = () =>{
+    setGatherUserFeedbackChecked(!gatherUserFeedbackChecked); 
+  }
+  const handleCheckboxChangeIdentifyUserPainPoints = () =>{
+    setIdentifyUserPainPointsChecked(!identifyUserPainPointsChecked); 
+  }
+  const handleCheckboxChangeOptimizeProductUsability = () =>{
+    setOptimizeProductUsabilityChecked(!optimizeProductUsabilityChecked); 
+  }
+  const handleCheckboxChangeValidateProductIdeas = () =>{
+    setValidateProductIdeasChecked(!validateProductIdeasChecked); 
+  }
+  const handleCheckboxChangeExploreUserBehavior = () =>{
+    setExploreUserBehaviorChecked(!exploreUserBehaviorChecked); 
+  }
+  const handleCheckboxChangeUnderstandUserDemographics = () =>{
+    setUnderstandUserDemographicsChecked(!understandUserDemographicsChecked); 
+  }
+  const handleCheckboxChangeDevelopUserCenteredFeatures = () =>{
+    setDevelopUserCenteredFeaturesChecked(!developUserCenteredFeaturesChecked); 
+  }
+  const handleCheckboxChangeGoalsOther = () =>{
+    setGoalsOtherChecked(!goalsOtherChecked); 
+  }
+
   // form handling? Not sure what this is for
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -84,7 +172,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
  
   const onSubmit = async () => {
     // Create array selectedCheckboxes that stores all the selected checkboxes
-    const selectedDoCheckboxes: string[] = [];
+    const selectedCheckboxes: string[] = [];
 
     //Create random workspace ID
     const workspaceId = Math.floor(Math.random() * (100000000 - 2 + 1)) + 2;
@@ -98,24 +186,84 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
     console.log(workspaceId);
     
 
-    // Conditional statements that check each state to see if the checkbox is checked, if true add to selected array
+    // **************** Conditional statements that check each state to see if the checkbox is checked, if true add to selected array ***************
     if(founderChecked){
-      selectedDoCheckboxes.push("founder");
+      selectedCheckboxes.push("founder");
     }
     if(clevelChecked){
-      selectedDoCheckboxes.push("clevel");
+      selectedCheckboxes.push("clevel");
     }
     if(teamLeadChecked){
-      selectedDoCheckboxes.push("teamlead");
+      selectedCheckboxes.push("teamlead");
     }
     if(icChecked){
-      selectedDoCheckboxes.push("ic");
+      selectedCheckboxes.push("ic");
     }
     if(doOtherChecked){
-      selectedDoCheckboxes.push("other");
+      selectedCheckboxes.push("do_other");
+    }
+    if(uiuxChecked){
+      selectedCheckboxes.push("uiux");
+    }
+    if(userResearchChecked){
+      selectedCheckboxes.push("user_research");
+    }
+    if(productManagementChecked){
+      selectedCheckboxes.push("product_management");
+    }
+    if(engineeringChecked){
+      selectedCheckboxes.push("engineering");
+    }
+    if(marketingChecked){
+      selectedCheckboxes.push("marketing");
+    }
+    if(salesChecked){
+      selectedCheckboxes.push("sales");
+    }
+    if(businessAnalysisChecked){
+      selectedCheckboxes.push("business_analysis");
+    }
+    if(dataScienceChecked){
+      selectedCheckboxes.push("data_science");
+    }
+    if(contentStrategyChecked){
+      selectedCheckboxes.push("content_strategy");
+    }
+    if(workOtherChecked){
+      selectedCheckboxes.push("work_other");
+    }
+    if(analyzeUserTestingDataChecked){
+      selectedCheckboxes.push("analyze_user_testing_data");
+    }
+    if(understandCustomerFeedbackChecked){
+      selectedCheckboxes.push("understand_customer_feedback");
+    }
+    if(gatherUserFeedbackChecked){
+      selectedCheckboxes.push("gather_user_feedback");
+    }
+    if(identifyUserPainPointsChecked){
+      selectedCheckboxes.push("identify_user_pain_points");
+    }
+    if(optimizeProductUsabilityChecked){
+      selectedCheckboxes.push("optimize_product_usability");
+    }
+    if(validateProductIdeasChecked){
+      selectedCheckboxes.push("validate_product_ideas");
+    }
+    if(exploreUserBehaviorChecked){
+      selectedCheckboxes.push("explore_user_behavior");
+    }
+    if(understandUserDemographicsChecked){
+      selectedCheckboxes.push("understand_user_demographics");
+    }
+    if(developUserCenteredFeaturesChecked){
+      selectedCheckboxes.push("develop_user_centered_features");
+    }
+    if(goalsOtherChecked){
+      selectedCheckboxes.push("goals_other");
     }
     
-    console.log(selectedDoCheckboxes);
+    console.log(selectedCheckboxes);
     console.log("Made it to onSubmit! Sending POST request");
 
     // Send the selected checkboxes to the API
@@ -124,7 +272,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({workspace_id: workspaceId, user_id: userId, user_email_address: userEmailAddress, selections: selectedDoCheckboxes }),
+      body: JSON.stringify({workspace_id: workspaceId, user_id: userId, user_email_address: userEmailAddress, selections: selectedCheckboxes }),
     });
   };
 
