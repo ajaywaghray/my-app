@@ -84,7 +84,7 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
             <form>
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
-                  <Input id="email" placeholder="Company Name" />
+                  <Input id="onboarding_company_name" placeholder="Company Name" />
                 </div>
                 <div className="flex flex-col space-y-1.5">
                 </div>
@@ -93,7 +93,7 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
             <form>
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
-                  <Input id="email" placeholder="Company Website" />
+                  <Input id="onboarding_company_url" placeholder="Company Website" />
                 </div>
                 <div className="flex flex-col space-y-1.5">
                 </div>
