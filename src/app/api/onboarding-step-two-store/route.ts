@@ -51,7 +51,3 @@ export async function POST (request: Request) {
   return new Response('SelectionsStepTwo stored', { status: 200 });
 
 }
-
-export async function GET(request: Request) {
-  
-}

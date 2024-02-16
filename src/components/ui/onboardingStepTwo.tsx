@@ -65,11 +65,24 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
   // Add state management and form handling here
   const [state, setState] = React.useState();
 
+  // ************ Company name and URL states are here *****************
+  const [companyName, setCompanyName] = useState('');
+  const [companyUrl, setCompanyUrl] = useState('');
+
   //Create constant for Clerk User ID
   const { isLoaded, orgId, userId, sessionId, getToken } = useAuth();
 
   // Create constant for Clerk user object
   const { user } = useUser();
+  
+  // **************** Company name and URL handlers ********************
+  const handleCompanyNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCompanyName(event.target.value);
+  };
+  
+  const handleCompanyUrlChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCompanyUrl(event.target.value);
+  };
 
   // ************ Company size checkbox states are here *****************
   const [soloEntrepreneurChecked, setSoloEntrepreneurChecked] = useState(false);
@@ -107,10 +120,12 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
     // Create array selectedCheckboxes that stores all the selected checkboxes
     const selectedCompanyCheckboxes: string[] = [];
 
-    const onboarding_company_name = "";
-    const onboarding_company_url = "";
+    const onboarding_company_name = companyName;
+    const onboarding_company_url = companyUrl;
 
     console.log(userId);
+    console.log(onboarding_company_name);
+    console.log(onboarding_company_url);
 
     // **************** Conditional statements that check each state to see if the checkbox is checked, if true add to selected array ***************
     if(soloEntrepreneurChecked){
@@ -174,7 +189,7 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
             <form>
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
-                  <Input id="onboarding_company_name" placeholder="Company Name" />
+                  <Input id="onboarding_company_name" placeholder="Company Name" value={companyName} onChange={handleCompanyNameChange} />
                 </div>
                 <div className="flex flex-col space-y-1.5">
                 </div>
@@ -183,7 +198,7 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
             <form>
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
-                  <Input id="onboarding_company_url" placeholder="Company Website" />
+                  <Input id="onboarding_company_url" placeholder="Company Website" value={companyUrl} onChange={handleCompanyUrlChange} />
                 </div>
                 <div className="flex flex-col space-y-1.5">
                 </div>
