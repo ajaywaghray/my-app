@@ -2,6 +2,10 @@
 
 import * as React from "react"
 
+import { useAuth } from "@clerk/nextjs";
+
+import { useUser } from "@clerk/nextjs";
+
 import { useState } from 'react';
 
 import { Checkbox } from "@/components/ui/checkbox"
@@ -61,6 +65,89 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
   // Add state management and form handling here
   const [state, setState] = React.useState();
 
+  //Create constant for Clerk User ID
+  const { isLoaded, orgId, userId, sessionId, getToken } = useAuth();
+
+  // Create constant for Clerk user object
+  const { user } = useUser();
+
+  // ************ Company size checkbox states are here *****************
+  const [soloEntrepreneurChecked, setSoloEntrepreneurChecked] = useState(false);
+  const [microChecked, setMicroChecked] = useState(false);
+  const [smallChecked, setSmallChecked] = useState(false);
+  const [mediumChecked, setMediumChecked] = useState(false);
+  const [largeChecked, setLargeChecked] = useState(false);
+  const [enterpriseSmallChecked, setEnterpriseSmallChecked] = useState(false);
+  const [enterpriseLargeChecked, setEnterpriseLargeChecked] = useState(false);
+
+  // **************** Company size checkbox handlers ********************
+  const handleCheckboxChangeSoloEntrepreneur = () =>{
+    setSoloEntrepreneurChecked(!soloEntrepreneurChecked); 
+  };
+  const handleCheckboxChangeMicro = () =>{
+    setMicroChecked(!microChecked); 
+  };
+  const handleCheckboxChangeSmall = () =>{
+    setSmallChecked(!smallChecked); 
+  };
+  const handleCheckboxChangeMedium = () =>{
+    setMediumChecked(!mediumChecked); 
+  };
+  const handleCheckboxChangeLarge = () =>{
+    setLargeChecked(!largeChecked); 
+  };
+  const handleCheckboxChangeEnterpriseSmall = () =>{
+    setEnterpriseSmallChecked(!enterpriseSmallChecked); 
+  };
+  const handleCheckboxChangeEnterpriseLarge = () =>{
+    setEnterpriseLargeChecked(!enterpriseLargeChecked); 
+  };
+
+  const onSubmit = async () => {
+    // Create array selectedCheckboxes that stores all the selected checkboxes
+    const selectedCompanyCheckboxes: string[] = [];
+
+    const onboarding_company_name = "";
+    const onboarding_company_url = "";
+
+    console.log(userId);
+
+    // **************** Conditional statements that check each state to see if the checkbox is checked, if true add to selected array ***************
+    if(soloEntrepreneurChecked){
+      selectedCompanyCheckboxes.push("founder");
+    }
+    if(microChecked){
+      selectedCompanyCheckboxes.push("micro");
+    }
+    if(smallChecked){
+      selectedCompanyCheckboxes.push("small");
+    }
+    if(mediumChecked){
+      selectedCompanyCheckboxes.push("medium");
+    }
+    if(largeChecked){
+      selectedCompanyCheckboxes.push("large");
+    }
+    if(enterpriseSmallChecked){
+      selectedCompanyCheckboxes.push("enterprise small");
+    }
+    if(enterpriseLargeChecked){
+      selectedCompanyCheckboxes.push("enterprise large");
+    }
+    
+    console.log(selectedCompanyCheckboxes);
+    console.log("Made it to onSubmit! Sending POST request");
+
+    // Send the selected checkboxes to the API
+    const response = await fetch('/api/onboarding-step-two-store', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({user_id: userId, onboarding_company_name: onboarding_company_name, onboarding_company_url: onboarding_company_url, onboarding_company_size: selectedCompanyCheckboxes}),
+    });
+  };
+
   return (
     <main>
     <OnboardingHeaderComponent></OnboardingHeaderComponent>
@@ -74,7 +161,10 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
             <div style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
               Fine tuning Quikest to align with your venture
             </div>
-            <Button onClick={onNext}>Analyze</Button>
+            <Button onClick={async () => {
+                await onSubmit();
+                onNext();
+              }}>Analyze</Button>
           </div>
           <div className="text-zinc-500 text-sm font-normal" style={{ display: 'flex', justifyContent: 'left' }}>
             Simply enter your company website, and let Quikest do the magic of sourcing essential details to begin generating your personas and propel your research journey forward.

@@ -27,8 +27,6 @@ import {
 } from "@/components/ui/card"
 
 import OnboardingHeaderComponent from "../common/onboardingHeader";
-import { randomInt } from "crypto";
-import { currentUser } from "@clerk/nextjs";
 
 const FormSchema = z.object({
   mobile: z.boolean().default(false).optional(),

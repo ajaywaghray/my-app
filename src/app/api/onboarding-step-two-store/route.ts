@@ -6,7 +6,7 @@ import type { NextRequest } from 'next/server';
 
 import { NextApiResponse, NextApiRequest } from 'next';
 
-async function storeSelectionsStepTwo(onboarding_company_name: any, onboarding_company_url: any, onboarding_company_size: any) {
+async function storeSelectionsStepTwo(user_id: any, onboarding_company_name: any, onboarding_company_url: any, onboarding_company_size: any) {
   
   console.log("storeSelectionsStepTwo function called");
 
@@ -19,7 +19,7 @@ async function storeSelectionsStepTwo(onboarding_company_name: any, onboarding_c
     return NextResponse.json({ error }, { status: 500 });
   }
   
-  console.log("Selections stored in database");
+  console.log("SelectionsStepTwo stored in database");
 
 }
 
@@ -42,10 +42,10 @@ export async function POST (request: Request) {
   console.log("Columns created if there wasn't columns already");
 
   // Receive array of what do you do inputs
-  const { onboarding_company_name, onboarding_company_url, onboarding_company_size } = await request.json();
+  const { user_id, onboarding_company_name, onboarding_company_url, onboarding_company_size } = await request.json();
 
   // Store the selections in the database against the new user ID and create a new workspace ID to store in the database
-  await storeSelectionsStepTwo(onboarding_company_name, onboarding_company_url, onboarding_company_size);
+  await storeSelectionsStepTwo(user_id, onboarding_company_name, onboarding_company_url, onboarding_company_size);
 
   // Return a response that the selections have been stored
   return new Response('SelectionsStepTwo stored', { status: 200 });
