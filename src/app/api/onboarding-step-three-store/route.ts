@@ -24,6 +24,8 @@ export async function GET (req: NextRequest, res: NextResponse) {
   const searchParams = req.nextUrl.searchParams
   const query = searchParams.get('query')
 
+  console.log("GET function called with query: " + query);
+
   // Fetch company name and URL from the database
   let companyName, companyUrl;
     try {
@@ -33,7 +35,9 @@ export async function GET (req: NextRequest, res: NextResponse) {
         WHERE user_id = ${query};
       `;
       companyName = result.rows[0].onboarding_company_name;
+      console.log("Company Name: " + companyName);
       companyUrl = result.rows[0].onboarding_company_url;
+      console.log("Company URL: " + companyUrl);
     } catch (error) {
       console.log("Error fetching company data: " + error);
       return new Response('Error fetching company data', { status: 500 });
