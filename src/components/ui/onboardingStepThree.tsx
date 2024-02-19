@@ -1,5 +1,13 @@
 'use client'
 
+import OpenAI from 'openai';
+
+import { OpenAIStream, StreamingTextResponse } from 'ai';
+
+import { useAuth } from "@clerk/nextjs";
+
+import { useUser } from "@clerk/nextjs";
+
 import * as React from "react"
 
 import { useState } from 'react';
@@ -58,6 +66,15 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
   // Add state management and form handling here
   const [state, setState] = React.useState();
 
+  //Create constant for Clerk User ID
+  const { isLoaded, orgId, userId, sessionId, getToken } = useAuth();
+
+  // Create constant for Clerk user object
+  const { user } = useUser();
+
+  const companyName = "Quikest";
+  const companyUrl = "https://www.quikest.com";
+
   return (
     <main>
     <OnboardingHeaderComponent></OnboardingHeaderComponent>
@@ -70,7 +87,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
         <div style={{ display: 'flex', height: '48px', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
-            Relume
+            { companyName } { companyUrl }
           </div>
           <Button onClick={onNext}>Done</Button>
         </div>
