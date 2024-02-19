@@ -43,9 +43,9 @@ export async function POST (request: Request) {
       AND column_name IN ('onboarding_company_name', 'onboarding_company_url', 'onboarding_company_size')
     ) THEN
       ALTER TABLE quikest 
-      ADD COLUMN onboarding_company_name VARCHAR(255) NOT NULL, 
-      ADD COLUMN onboarding_company_url VARCHAR(255) NOT NULL, 
-      ADD COLUMN onboarding_company_size VARCHAR(255) NOT NULL;
+      ADD COLUMN onboarding_company_name VARCHAR(255), 
+      ADD COLUMN onboarding_company_url VARCHAR(255), 
+      ADD COLUMN onboarding_company_size VARCHAR(255);
     END IF;
   END $$;
   `;
