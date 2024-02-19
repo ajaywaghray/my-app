@@ -13,13 +13,20 @@ async function storeSelectionsStepTwo(user_id: any, onboarding_company_name: any
   // Store selections from onboarding in database
   try {
     console.log("Starting SQL query to store selections in database");
-    await sql`INSERT INTO quikest (onboarding_company_name, onboarding_company_url,onboarding_company_size) VALUES (${onboarding_company_name}, ${onboarding_company_url}, ${onboarding_company_size});`;
+    await sql`
+    UPDATE quikest 
+      SET onboarding_company_name = ${onboarding_company_name}, 
+          onboarding_company_url = ${onboarding_company_url}, 
+          onboarding_company_size = ${onboarding_company_size} 
+      WHERE user_id = ${user_id};
+    `;
+    console.log("Onboarding step 2 selections updated in database");
   } catch (error) {
-    console.log("Selections not stored in database due to error: " + error);
+    console.log("Step 2 Selections not stored in database due to error: " + error);
     return NextResponse.json({ error }, { status: 500 });
   }
   
-  console.log("SelectionsStepTwo stored in database");
+  console.log("Selections Step 2 stored in database");
 
 }
 
@@ -48,6 +55,6 @@ export async function POST (request: Request) {
   await storeSelectionsStepTwo(user_id, onboarding_company_name, onboarding_company_url, onboarding_company_size);
 
   // Return a response that the selections have been stored
-  return new Response('SelectionsStepTwo stored', { status: 200 });
+  return new Response('Selections Step 2 stored', { status: 200 });
 
 }
