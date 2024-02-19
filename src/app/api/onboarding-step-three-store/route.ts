@@ -45,7 +45,7 @@ export async function GET (req: NextRequest, res: NextResponse) {
 
     // Return company name and URL
     const responseBody = { companyName, companyUrl };
-    return new Response(JSON.stringify(responseBody), { status: 200 });
+    res = new NextResponse(JSON.stringify(responseBody), { status: 200 });
 }
 
 export async function POST (request: Request) {
