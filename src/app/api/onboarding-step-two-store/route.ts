@@ -35,15 +35,19 @@ export async function POST (request: Request) {
   
   //Create a table if none exists
   const createColumns = await sql`
-  IF NOT EXISTS (
-    SELECT * FROM sys.columns 
-    WHERE Name1 = N'onboarding_company_name' 
-    AND Name2 = N'onboarding_company_url' 
-    AND Name3 = N'onboarding_company_size' 
-  )
+  DO $$
   BEGIN
-      ALTER TABLE quikest ADD onboarding_company_name VARCHAR(255) NOT NULL onboarding_company_url VARCHAR(255) NOT NULL onboarding_company_size VARCHAR(255) NOT NULL;
-  END
+    IF NOT EXISTS (
+      SELECT 1 FROM information_schema.columns 
+      WHERE table_name = 'quikest' 
+      AND column_name IN ('onboarding_company_name', 'onboarding_company_url', 'onboarding_company_size')
+    ) THEN
+      ALTER TABLE quikest 
+      ADD COLUMN onboarding_company_name VARCHAR(255) NOT NULL, 
+      ADD COLUMN onboarding_company_url VARCHAR(255) NOT NULL, 
+      ADD COLUMN onboarding_company_size VARCHAR(255) NOT NULL;
+    END IF;
+  END $$;
   `;
 
   console.log("Columns created if there wasn't columns already");
