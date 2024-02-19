@@ -12,6 +12,8 @@ import * as React from "react"
 
 import { useState } from 'react';
 
+import { useEffect } from 'react';
+
 import { Checkbox } from "@/components/ui/checkbox"
 
 import {
@@ -72,8 +74,56 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
   // Create constant for Clerk user object
   const { user } = useUser();
 
-  const companyName = "Quikest";
-  const companyUrl = "https://www.quikest.com";
+  const companyName = "Poop Inc.";
+  const companyUrl = "https://www.poop.com";
+
+  const onLoad = async () => {
+    
+    console.log("Onboarding Step Three content being loaded");
+
+    const response = await fetch('/api/onboarding-step-three-store', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({user_id: userId}),
+    });
+
+    if (!response.ok) {
+      console.log("Error fetching company data: " + response.statusText);
+      return;
+    }
+  
+    const data = await response.json();
+    const companyName = data.companyName;
+    const companyUrl = data.companyUrl;
+  
+    console.log("Company Name: " + companyName);
+    console.log("Company URL: " + companyUrl);
+
+  };
+
+  const onSubmit = async () => {
+    
+    console.log("Onboarding Step Three content being submitted");
+
+    const response = await fetch('/api/onboarding-step-three-store', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({user_id: userId}),
+    });
+
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await onLoad();
+    };
+  
+    fetchData();
+  }, []);
 
   return (
     <main>
