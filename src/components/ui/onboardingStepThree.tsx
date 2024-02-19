@@ -92,7 +92,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <Button onClick={onNext}>Done</Button>
         </div>
         <div className="text-zinc-500 text-sm font-normal" style={{ display: 'flex', justifyContent: 'left' }}>
-          Relume is fascinating! We have summarized their key aspects. Anything to tweak or add?
+        { companyName } is fascinating! We have summarized their key aspects. Anything to tweak or add?
         </div>
         
         <Select>
