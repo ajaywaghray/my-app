@@ -22,9 +22,9 @@ export async function GET (req: NextRequest, res: NextResponse) {
   console.log("GET function called");
 
   const searchParams = req.nextUrl.searchParams
-  const query = searchParams.get('query')
+  const userID = searchParams.get('user_id')
 
-  console.log("GET function called with query: " + query);
+  console.log("GET function called with user ID: " + userID);
 
   // Fetch company name and URL from the database
   let companyName, companyUrl;
@@ -32,7 +32,7 @@ export async function GET (req: NextRequest, res: NextResponse) {
       const result = await sql`
         SELECT onboarding_company_name, onboarding_company_url 
         FROM quikest 
-        WHERE user_id = ${query};
+        WHERE user_id = ${userID};
       `;
       companyName = result.rows[0].onboarding_company_name;
       console.log("Company Name: " + companyName);
