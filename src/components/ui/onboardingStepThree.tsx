@@ -81,12 +81,11 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     
     console.log("Onboarding Step Three content being loaded");
 
-    const response = await fetch('/api/onboarding-step-three-store', {
+    const response = await fetch(`/api/onboarding-step-three-store?user_id=${encodeURIComponent(userId ?? '')}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({user_id: userId}),
     });
 
     if (!response.ok) {
