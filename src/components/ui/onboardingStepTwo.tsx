@@ -1,5 +1,9 @@
 'use client'
 
+import OpenAI from 'openai';
+
+import { OpenAIStream, StreamingTextResponse } from 'ai';
+
 import * as React from "react"
 
 import { useAuth } from "@clerk/nextjs";
