@@ -18,19 +18,19 @@ const openai = new OpenAI({
 // Set the runtime to edge for best performance
 export const runtime = 'edge';
 
-export async function GET (req: NextApiRequest, res: NextApiResponse) {
+export async function GET (req: NextRequest, res: NextResponse) {
   console.log("GET function called");
 
-  // Receive array of what do you do inputs
-  const { user_id } = req.query;
+  const searchParams = req.nextUrl.searchParams
+  const query = searchParams.get('query')
 
-    // Fetch company name and URL from the database
-    let companyName, companyUrl;
+  // Fetch company name and URL from the database
+  let companyName, companyUrl;
     try {
       const result = await sql`
         SELECT onboarding_company_name, onboarding_company_url 
         FROM quikest 
-        WHERE user_id = ${String(user_id)};
+        WHERE user_id = ${query};
       `;
       companyName = result.rows[0].onboarding_company_name;
       companyUrl = result.rows[0].onboarding_company_url;
@@ -40,7 +40,8 @@ export async function GET (req: NextApiRequest, res: NextApiResponse) {
     }
 
     // Return company name and URL
-    res.status(200).json({ companyName, companyUrl });
+    const responseBody = { companyName, companyUrl };
+    return new Response(JSON.stringify(responseBody), { status: 200 });
 }
 
 export async function POST (request: Request) {
