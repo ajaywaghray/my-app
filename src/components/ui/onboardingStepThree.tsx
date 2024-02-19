@@ -74,8 +74,9 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
   // Create constant for Clerk user object
   const { user } = useUser();
 
-  const companyName = "Poop Inc.";
-  const companyUrl = "https://www.poop.com";
+// Create state variables for company name and URL
+const [companyName, setCompanyName] = useState("");
+const [companyUrl, setCompanyUrl] = useState("");
 
   const onLoad = async () => {
     
@@ -94,8 +95,8 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     }
   
     const data = await response.json();
-    const companyName = data.companyName;
-    const companyUrl = data.companyUrl;
+    setCompanyName(data.companyName);
+    setCompanyUrl(data.companyUrl);
   
     console.log("Company Name I get from the GET: " + companyName);
     console.log("Company URL I get from the GET: " + companyUrl);
