@@ -97,8 +97,8 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     const companyName = data.companyName;
     const companyUrl = data.companyUrl;
   
-    console.log("Company Name: " + companyName);
-    console.log("Company URL: " + companyUrl);
+    console.log("Company Name I get from the GET: " + companyName);
+    console.log("Company URL I get from the GET: " + companyUrl);
 
   };
 
