@@ -179,7 +179,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
         <div style={{ display: 'flex', height: '48px', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
-            { companyName } { companyUrl }
+            { companyName } { companyUrl } { companyMission }
           </div>
           <Button onClick={onNext}>Done</Button>
         </div>
@@ -208,7 +208,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Input id="companymission" placeholder= { companyMission } />
+                <Input id="companymission" placeholder= "poop" />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
