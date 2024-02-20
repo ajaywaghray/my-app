@@ -112,7 +112,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
   const openAiCompanyMission = async () => {
     
-    console.log("Getting company mission from OpenAI");
+    console.log("Getting company mission from OpenAI with the question: " + missionPrompt);
 
     const response = await fetch(`/api/openai-completion/`, {
       method: 'POST',
