@@ -30,7 +30,7 @@ export async function POST (request: Request) {
     // Request the OpenAI API for the response based on the prompt
     const response = await openai.chat.completions.create({
         model: 'gpt-4-0125-preview',
-        max_tokens: 1000,
+        max_tokens: 500,
         stream: true,
         messages,
     });
