@@ -117,6 +117,16 @@ const missionPrompt = "What is the mission of " + companyName + companyUrl + "?"
       body: JSON.stringify({messages: missionPrompt})
     });
 
+    if (!response.ok) {
+      console.log("Error fetching company mission: " + response.statusText);
+      return;
+    }
+
+    const data = await response.json();
+    setCompanyMission(data.completion);
+
+    console.log("Company Mission I get from the POST: " + companyMission);
+
   };
 
   const onSubmit = async () => {
@@ -146,6 +156,7 @@ const missionPrompt = "What is the mission of " + companyName + companyUrl + "?"
     };
   
     fetchData();
+    fetchCompanyMission();
   }, []);
 
   return (
@@ -189,7 +200,7 @@ const missionPrompt = "What is the mission of " + companyName + companyUrl + "?"
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Input id="companymission" placeholder="Company Mission" />
+                <Input id="companymission" placeholder= { companyName } />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
