@@ -107,14 +107,21 @@ const missionPrompt = "What is the mission of " + companyName + companyUrl + "?"
 
   const openAiCompanyMission = async () => {
     
-    console.log("Getting comaony mission from OpenAI");
+    console.log("Getting company mission from OpenAI");
 
     const response = await fetch(`/api/openai-completion/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({messages: missionPrompt})
+      body: JSON.stringify({
+        messages: [
+          {
+            role: 'user',
+            content: missionPrompt
+          }
+        ]
+      })
     });
 
     if (!response.ok) {
