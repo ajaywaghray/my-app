@@ -25,6 +25,8 @@ export async function POST (request: Request) {
     // Receive the user ID and the company name
     const { messages } = await request.json();
 
+    console.log("Sending the following messages to OpenAI: " + messages);
+
     // Request the OpenAI API for the response based on the prompt
     const response = await openai.chat.completions.create({
         model: 'gpt-4-0125-preview',
@@ -32,6 +34,8 @@ export async function POST (request: Request) {
         stream: true,
         messages,
     });
+
+    console.log("OpenAI response: " + response);
 
     // Convert the response into a friendly text-stream
     const stream = OpenAIStream(response);
