@@ -103,11 +103,18 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     setCompanyName(data.companyName);
     setCompanyUrl(data.companyUrl);
 
+    console.log("Company Name I get from the GET: " + data.companyName);
+    console.log("Company URL I get from the GET: " + data.companyUrl);
+
+    openAiCompanyMission(data.companyName, data.companyUrl);
+
   };
 
-  const openAiCompanyMission = async () => {
+  const openAiCompanyMission = async (companyName: string, companyUrl: string) => {
     
-    console.log("Getting company mission from OpenAI with the question: " + missionPrompt);
+    const missionPromptToSend = "What is the mission of " + companyName + companyUrl + "?";
+    
+    console.log("Getting company mission from OpenAI with the question: " + missionPromptToSend);
 
     const response = await fetch(`/api/openai-completion/`, {
       method: 'POST',
@@ -118,7 +125,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
         messages: [
           {
             role: 'user',
-            content: missionPrompt
+            content: missionPromptToSend
           }
         ]
       })
@@ -151,14 +158,9 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
   };
 
   useEffect(() => {
-    
+
     const fetchData = async () => {
       await onLoad();
-
-      console.log("Company Name I get from the GET: " + companyName);
-      console.log("Company URL I get from the GET: " + companyUrl);
-    
-      await openAiCompanyMission();
     };
 
     fetchData();
