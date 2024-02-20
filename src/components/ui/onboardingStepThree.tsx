@@ -112,7 +112,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
   const openAiCompanyMission = async (companyName: string, companyUrl: string) => {
     
-    const missionPromptToSend = "What is the mission of " + companyName + companyUrl + "?";
+    const missionPromptToSend = "What is the mission of " + companyName + ", website: " + companyUrl + "?";
     
     console.log("Getting company mission from OpenAI with the question: " + missionPromptToSend);
 
