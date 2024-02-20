@@ -19,14 +19,11 @@ const openai = new OpenAI({
 export const runtime = 'edge';
 
 export async function POST (request: Request) {
-    
+
     console.log("openaiCompletion function called");
 
     // Receive the user ID and the company name
     const { messages } = await request.json();
-
-    // Create the prompt
-    // const prompt = `You are the CEO of a company called ${company_name}. You are writing a blog post about your company. Write the first paragraph of the blog post.`;
 
     // Request the OpenAI API for the response based on the prompt
     const response = await openai.chat.completions.create({
