@@ -78,6 +78,8 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 const [companyName, setCompanyName] = useState("");
 const [companyUrl, setCompanyUrl] = useState("");
 
+const missionPrompt = "What is the mission of " + companyName + companyUrl + "?";
+
   const onLoad = async () => {
     
     console.log("Onboarding Step Three content being loaded");
@@ -103,6 +105,20 @@ const [companyUrl, setCompanyUrl] = useState("");
 
   };
 
+  const openAiCompanyMission = async () => {
+    
+    console.log("Getting comaony mission from OpenAI");
+
+    const response = await fetch(`/api/openai-completion/`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({messages: missionPrompt})
+    });
+
+  };
+
   const onSubmit = async () => {
     
     console.log("Onboarding Step Three content being submitted");
@@ -117,9 +133,16 @@ const [companyUrl, setCompanyUrl] = useState("");
 
   };
 
+  // Create a state variable for the company mission
+  const [companyMission, setCompanyMission] = useState("");
+
   useEffect(() => {
     const fetchData = async () => {
       await onLoad();
+    };
+
+    const fetchCompanyMission = async () => {
+      await openAiCompanyMission();
     };
   
     fetchData();
@@ -166,7 +189,7 @@ const [companyUrl, setCompanyUrl] = useState("");
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Input id="email" placeholder="Company Mission" />
+                <Input id="companymission" placeholder="Company Mission" />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
@@ -180,7 +203,7 @@ const [companyUrl, setCompanyUrl] = useState("");
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Input id="email" placeholder="Product Description" />
+                <Input id="productdescription" placeholder="Product Description" />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
