@@ -151,21 +151,18 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
   };
 
   useEffect(() => {
+    
     const fetchData = async () => {
       await onLoad();
-    };
 
-    fetchData();
-
-    const fetchCompanyMission = async () => {
-    
       console.log("Company Name I get from the GET: " + companyName);
       console.log("Company URL I get from the GET: " + companyUrl);
     
       await openAiCompanyMission();
     };
-    
-    fetchCompanyMission();
+
+    fetchData();
+
   }, []);
 
   return (
