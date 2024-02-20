@@ -74,11 +74,14 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
   // Create constant for Clerk user object
   const { user } = useUser();
 
-// Create state variables for company name and URL
-const [companyName, setCompanyName] = useState("");
-const [companyUrl, setCompanyUrl] = useState("");
+  // Create state variables for company name and URL
+  const [companyName, setCompanyName] = useState("");
+  const [companyUrl, setCompanyUrl] = useState("");
 
-const missionPrompt = "What is the mission of " + companyName + companyUrl + "?";
+  // Create a state variable for the company mission
+  const [companyMission, setCompanyMission] = useState("");
+
+  const missionPrompt = "What is the mission of " + companyName + companyUrl + "?";
 
   const onLoad = async () => {
     
@@ -151,9 +154,6 @@ const missionPrompt = "What is the mission of " + companyName + companyUrl + "?"
     });
 
   };
-
-  // Create a state variable for the company mission
-  const [companyMission, setCompanyMission] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
