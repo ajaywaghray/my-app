@@ -103,6 +103,8 @@ const missionPrompt = "What is the mission of " + companyName + companyUrl + "?"
     console.log("Company Name I get from the GET: " + companyName);
     console.log("Company URL I get from the GET: " + companyUrl);
 
+    openAiCompanyMission();
+
   };
 
   const openAiCompanyMission = async () => {
@@ -157,13 +159,8 @@ const missionPrompt = "What is the mission of " + companyName + companyUrl + "?"
     const fetchData = async () => {
       await onLoad();
     };
-
-    const fetchCompanyMission = async () => {
-      await openAiCompanyMission();
-    };
   
     fetchData();
-    fetchCompanyMission();
   }, []);
 
   return (
