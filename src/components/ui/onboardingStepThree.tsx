@@ -102,11 +102,6 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     const data = await response.json();
     setCompanyName(data.companyName);
     setCompanyUrl(data.companyUrl);
-  
-    console.log("Company Name I get from the GET: " + companyName);
-    console.log("Company URL I get from the GET: " + companyUrl);
-
-    openAiCompanyMission();
 
   };
 
@@ -159,8 +154,18 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     const fetchData = async () => {
       await onLoad();
     };
-  
+
     fetchData();
+
+    const fetchCompanyMission = async () => {
+    
+      console.log("Company Name I get from the GET: " + companyName);
+      console.log("Company URL I get from the GET: " + companyUrl);
+    
+      await openAiCompanyMission();
+    };
+    
+    fetchCompanyMission();
   }, []);
 
   return (
