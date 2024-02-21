@@ -17,7 +17,7 @@ export async function POST (request: Request) {
     // Receive the user ID and the company name
     const { message } = await request.json();
 
-    console.log("Sending the following messages to OpenAI: " + message);
+    console.log("Sending the following messages to OpenAI: " + message.content);
 
     // Request the OpenAI API for the response based on the prompt
     const response = await openai.chat.completions.create({
@@ -27,7 +27,7 @@ export async function POST (request: Request) {
         messages: [
             {
               role: 'user',
-              content: message,
+              content: message.content,
             },
           ],
     });
