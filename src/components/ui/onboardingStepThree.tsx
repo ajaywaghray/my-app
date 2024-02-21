@@ -70,17 +70,6 @@ import OnboardingHeaderComponent from "../common/onboardingHeader";
 
 const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
   
-  const {
-    completion,
-    input,
-    stop,
-    isLoading,
-    handleInputChange,
-    handleSubmit,
-  } = useCompletion({
-    api: '/api/openai-completion',
-  });
-  
   // Add state management and form handling here
   const [state, setState] = React.useState();
 
@@ -96,8 +85,9 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
   // Create a state variable for the company mission
   const [companyMission, setCompanyMission] = useState("");
-
-  const missionPrompt = "What is the mission of " + companyName + companyUrl + "?";
+  const { complete } = useCompletion({
+    api: '/api/openai-completion',
+  });
 
   const onLoad = async () => {
     
@@ -132,7 +122,13 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     
     console.log("Getting company mission from OpenAI with the question: " + missionPromptToSend);
 
-    const response = await fetch(`/api/openai-completion/`, {
+    const completion = await complete(missionPromptToSend) || '';
+
+    console.log("Company Mission I get from OpenAI: " + completion);
+
+    setCompanyMission(completion);
+
+    /* const response = await fetch(`/api/openai-completion/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -145,7 +141,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           }
         ]
       })
-    });
+    }); 
 
     if (!response.ok) {
       console.log("Error fetching company mission: " + response.statusText);
@@ -155,7 +151,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     const data = await response.json();
     setCompanyMission(data.completion);
 
-    console.log("Company Mission I get from the POST: " + companyMission);
+    console.log("Company Mission I get from the POST: " + companyMission); */
 
   };
 
@@ -261,22 +257,6 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
         </CardContent>
       </Card>
-    </div>
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          value={input}
-          placeholder="Enter your prompt..."
-          onChange={handleInputChange}
-        />
-        <p>Completion result: {completion}</p>
-        <button type="button" onClick={stop}>
-          Stop
-        </button>
-        <button disabled={isLoading} type="submit">
-          Submit
-        </button>
-      </form>
     </div>
   </main>
   );
