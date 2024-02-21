@@ -35,10 +35,12 @@ export async function POST (request: Request) {
         messages,
     });
 
-    console.log("OpenAI response: " + response);
+    console.log("OpenAI response: " + response );
 
     // Convert the response into a friendly text-stream
     const stream = OpenAIStream(response);
+
+    console.log("I got past the stream command!");
 
     // Respond with the stream
     return new StreamingTextResponse(stream);
