@@ -1,5 +1,9 @@
 'use client'
 
+export const runtime = 'edge';
+
+import { useCompletion } from 'ai/react';
+
 import OpenAI from 'openai';
 
 import { OpenAIStream, StreamingTextResponse } from 'ai';
@@ -65,6 +69,18 @@ import { UserButton } from "@clerk/nextjs";
 import OnboardingHeaderComponent from "../common/onboardingHeader";
 
 const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
+  
+  const {
+    completion,
+    input,
+    stop,
+    isLoading,
+    handleInputChange,
+    handleSubmit,
+  } = useCompletion({
+    api: '/api/openai-completion',
+  });
+  
   // Add state management and form handling here
   const [state, setState] = React.useState();
 
@@ -245,6 +261,22 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
         </CardContent>
       </Card>
+    </div>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input
+          value={input}
+          placeholder="Enter your prompt..."
+          onChange={handleInputChange}
+        />
+        <p>Completion result: {completion}</p>
+        <button type="button" onClick={stop}>
+          Stop
+        </button>
+        <button disabled={isLoading} type="submit">
+          Submit
+        </button>
+      </form>
     </div>
   </main>
   );
