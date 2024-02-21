@@ -17,6 +17,8 @@ export async function POST (request: Request) {
     // Receive the user ID and the company name
     const { message } = await request.json();
 
+    console.log("openaiCompletion function called with message: " + message);
+
     // Request the OpenAI API for the response based on the prompt
     const response = await openai.chat.completions.create({
         model: 'gpt-4-0125-preview',
