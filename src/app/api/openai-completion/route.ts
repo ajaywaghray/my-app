@@ -24,12 +24,7 @@ export async function POST (request: Request) {
         model: 'gpt-4-0125-preview',
         max_tokens: 500,
         stream: true,
-        messages: [
-            {
-              role: 'user',
-              content: `Here is the prompt: ${message}`,
-            },
-          ],
+        messages: message,
     });
 
     console.log("OpenAI response: ", response );
