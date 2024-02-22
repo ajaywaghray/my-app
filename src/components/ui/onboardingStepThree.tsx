@@ -206,7 +206,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Input id="productdescription" placeholder="Product Description" />
+                <Textarea id="productdescription" placeholder="Product Description" />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
@@ -220,7 +220,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Input id="email" placeholder="Target Audience" />
+                <Textarea id="email" placeholder="Target Audience" />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
