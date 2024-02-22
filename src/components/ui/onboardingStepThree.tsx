@@ -83,7 +83,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
   // Create a state variable for the company mission
   const [companyMission, setCompanyMission] = useState("");
-  const { complete } = useCompletion({
+  const { completion } = useCompletion({
     api: '/api/openai-completion',
   });
 
@@ -114,18 +114,20 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
   };
 
-    const openAiCompanyMission = useCallback( async (companyName: string, companyUrl: string) => {
-      
-      console.log("Getting company mission from OpenAI with the question: " + companyUrl);
+      const openAiCompanyMission = useCallback( async (companyName: string, companyUrl: string) => {
+        
+        const missionPromptToSend = "What is the mission of " + companyName + ", website: " + companyUrl + "?";
+        
+        console.log("Getting company mission from OpenAI with the question: " + missionPromptToSend);
 
-      const completion = await complete(companyUrl);
+        const completed = await completion(missionPromptToSend);
 
-      console.log("Company Mission I get from OpenAI: " + completion);
+        console.log("Company Mission I get from OpenAI: " + completed);
 
-      setCompanyMission(completion as string);
-    },
-    [complete],
-  );
+        setCompanyMission(completed as string);
+      },
+      [completion],
+    );
 
   const onSubmit = async () => {
     

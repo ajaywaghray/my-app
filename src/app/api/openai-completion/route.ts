@@ -27,7 +27,7 @@ export async function POST (request: Request) {
         messages: [
             {
               role: 'user',
-              content: `What is the mission of the company at the website: ${message}`,
+              content: `Here is the prompt: ${message}`,
             },
           ],
     });
