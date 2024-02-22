@@ -116,11 +116,9 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
     const openAiCompanyMission = useCallback( async (companyName: string, companyUrl: string) => {
       
-      const missionPromptToSend = "What is the mission of " + companyName + ", website: " + companyUrl + "?";
-      
-      console.log("Getting company mission from OpenAI with the question: " + missionPromptToSend);
+      console.log("Getting company mission from OpenAI with the question: " + companyUrl);
 
-      const completion = await complete(missionPromptToSend);
+      const completion = await complete(companyUrl);
 
       console.log("Company Mission I get from OpenAI: " + completion);
 
