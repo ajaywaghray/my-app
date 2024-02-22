@@ -122,9 +122,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
         const completion = await complete(missionPromptToSend);
 
-        console.log("Company Mission I get from OpenAI: " + completion);
-
-        setCompanyMission(completion as string);
+        setCompanyMission(completion || "Your company mission is loading...");
       };
 
   const onSubmit = async () => {
@@ -192,7 +190,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Textarea id="companymission" placeholder= "Company Mission"  value= { companyMission } />
+                <Textarea id="companymission" placeholder= "Your company mission is loading..."  value= { companyMission } />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
@@ -206,7 +204,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Textarea id="productdescription" placeholder="Product Description" />
+                <Textarea id="productdescription" placeholder="Your product description is loading..." />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
@@ -220,7 +218,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Textarea id="email" placeholder="Target Audience" />
+                <Textarea id="email" placeholder="Your target audience is loading..." />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
