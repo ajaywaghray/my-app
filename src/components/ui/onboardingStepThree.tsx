@@ -84,7 +84,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
   // Create a state variable for the company mission
   const [companyMission, setCompanyMission] = useState("");
   const { complete } = useCompletion({
-    api: '/api/openai-completion',
+    api: '/api/completion',
   });
 
   const onLoad = async () => {
