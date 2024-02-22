@@ -118,7 +118,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
         
         const missionPromptToSend = "What is the mission of " + companyName + ", website: " + companyUrl + "?";
         
-        console.log("Getting company mission from OpenAI with the question: " + missionPromptToSend);
+        console.log("Getting company mission from OpenAI with the question: " + JSON.stringify(missionPromptToSend));
 
         const completion = await complete( JSON.stringify(missionPromptToSend) );
 
