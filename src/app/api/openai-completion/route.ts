@@ -10,12 +10,12 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-export async function POST (request: Request) {
+export async function POST (req: Request) {
 
     console.log("openaiCompletion function called");
 
     // Receive the user ID and the company name
-    const { message } = await request.json();
+    const { message } = await req.json();
 
     console.log("openaiCompletion function called with message: ", message );
 
