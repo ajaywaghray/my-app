@@ -14,12 +14,10 @@ export async function POST (req: Request) {
 
     console.log("openaiCompletion function called");
 
-    console.log("req: ", req.body );
-
     // Receive the user ID and the company name
-    const { message } = await req.json();
+    const { prompt } = await req.json();
 
-    console.log("openaiCompletion function called with message: ", message );
+    console.log("openaiCompletion function called with message: ", prompt );
 
     // Request the OpenAI API for the response based on the prompt
     const response = await openai.chat.completions.create({
@@ -29,7 +27,7 @@ export async function POST (req: Request) {
         messages: [
             {
                 role: 'user',
-                content: `Here is the message: ${message}`,
+                content: `Here is the message: ${prompt}`,
             },
         ],
     });
