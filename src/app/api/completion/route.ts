@@ -22,12 +22,12 @@ export async function POST (req: Request) {
     // Request the OpenAI API for the response based on the prompt
     const response = await openai.chat.completions.create({
         model: 'gpt-4-0125-preview',
-        max_tokens: 500,
+        max_tokens: 150,
         stream: true,
         messages: [
             {
                 role: 'user',
-                content: `Here is the message: ${prompt}`,
+                content: `${prompt}`,
             },
         ],
     });
