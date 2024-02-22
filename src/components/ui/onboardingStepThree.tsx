@@ -120,7 +120,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
         
         console.log("Getting company mission from OpenAI with the question: " + missionPromptToSend);
 
-        const completion = await complete(missionPromptToSend);
+        const completion = await complete(companyName);
 
         console.log("Company Mission I get from OpenAI: " + completion);
 
