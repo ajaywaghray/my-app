@@ -14,7 +14,7 @@ export async function POST (req: Request) {
 
     console.log("openaiCompletion function called");
 
-    console.log("req: ", req );
+    console.log("req: ", req.body );
 
     // Receive the user ID and the company name
     const { message } = await req.json();
