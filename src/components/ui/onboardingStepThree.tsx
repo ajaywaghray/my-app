@@ -14,9 +14,7 @@ import { useUser } from "@clerk/nextjs";
 
 import * as React from "react"
 
-import { useState } from 'react';
-
-import { useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
 import { Checkbox } from "@/components/ui/checkbox"
 
@@ -116,7 +114,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
   };
 
-  const openAiCompanyMission = async (companyName: string, companyUrl: string) => {
+  const openAiCompanyMission = useCallback( async (companyName: string, companyUrl: string) => {
     
     const missionPromptToSend = "What is the mission of " + companyName + ", website: " + companyUrl + "?";
     
@@ -127,33 +125,9 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     console.log("Company Mission I get from OpenAI: " + completion);
 
     setCompanyMission(completion);
-
-    /* const response = await fetch(`/api/openai-completion/`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        messages: [
-          {
-            role: 'user',
-            content: missionPromptToSend
-          }
-        ]
-      })
-    }); 
-
-    if (!response.ok) {
-      console.log("Error fetching company mission: " + response.statusText);
-      return;
-    }
-
-    const data = await response.json();
-    setCompanyMission(data.completion);
-
-    console.log("Company Mission I get from the POST: " + companyMission); */
-
-  };
+  },
+  [complete],
+);
 
   const onSubmit = async () => {
     
