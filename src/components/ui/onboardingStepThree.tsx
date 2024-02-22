@@ -192,7 +192,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Textarea id="companymission" placeholder= { companyMission } />
+                <Textarea id="companymission" placeholder= "Company Mission"  value= { companyMission } />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
