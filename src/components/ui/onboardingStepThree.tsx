@@ -16,7 +16,7 @@ import * as React from "react"
 
 import { useState, useCallback, useEffect } from 'react';
 
-import { Checkbox } from "@/components/ui/checkbox"
+import { Textarea } from "@/components/ui/textarea"
 
 import {
   Select,
@@ -192,7 +192,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Input id="companymission" placeholder= { companyMission } className="resize-y" />
+                <Textarea id="companymission" placeholder= { companyMission } className="resize-y" />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
