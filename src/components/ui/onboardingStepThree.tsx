@@ -85,11 +85,13 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
   const [companyMission, setCompanyMission] = useState("");
   const {
     completion,
+    complete,
     input,
     stop,
     isLoading,
     handleInputChange,
     handleSubmit,
+    setInput
   } = useCompletion({
     api: '/api/completion',
   });
@@ -127,7 +129,12 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
         
         console.log("Getting company mission from OpenAI with the question: " + missionPromptToSend);
 
-        //const completion = await complete(missionPromptToSend);
+        
+
+        //use setInput to set input to the prompt
+        setInput(missionPromptToSend);
+
+        complete(input);
 
         setCompanyMission(completion || "Your company mission is loading...");
       };
