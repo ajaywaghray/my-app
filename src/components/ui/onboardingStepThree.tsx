@@ -129,10 +129,10 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
         
         console.log("Getting company mission from OpenAI with the question: " + missionPromptToSend);
 
-        
-
         //use setInput to set input to the prompt
         setInput(missionPromptToSend);
+
+        console.log("Input set to: " + input);
 
         const completion = await complete(input);
 
