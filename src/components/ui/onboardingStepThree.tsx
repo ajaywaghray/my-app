@@ -71,7 +71,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
   // Create a state variable for the company mission
   const {
-    completion: completionDesciption,
+    completion: completionDescription,
     complete: completeDescription,
     input: inputDescription,
     stop: stopDescription,
@@ -192,11 +192,11 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     }
 
     if (inputAudience) {
-      completeMission(inputMission);
+      completeAudience(inputAudience);
     }
 
     if (inputDescription) {
-      completeMission(inputMission);
+      completeDescription(inputDescription);
     }
 
     fetchData();
@@ -258,7 +258,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Textarea id="productdescription" placeholder="Your product description is loading..." value= {completionMission} />
+                <Textarea id="productdescription" placeholder="Your product description is loading..." value= {completionDescription} />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
@@ -272,7 +272,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Textarea id="email" placeholder="Your target audience is loading..." value= {completionMission} />
+                <Textarea id="email" placeholder="Your target audience is loading..." value= {completionAudience} />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
