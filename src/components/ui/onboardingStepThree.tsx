@@ -4,10 +4,6 @@ export const runtime = 'edge';
 
 import { useCompletion } from 'ai/react';
 
-import OpenAI from 'openai';
-
-import { OpenAIStream, StreamingTextResponse } from 'ai';
-
 import { useAuth } from "@clerk/nextjs";
 
 import { useUser } from "@clerk/nextjs";
@@ -45,14 +41,6 @@ import {
 
 import { Button } from "@/components/ui/button"
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-
-import { Input } from "@/components/ui/input"
-
-import { Label } from "@/components/ui/label"
-
 import {
   Card,
   CardContent,
@@ -83,27 +71,36 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
   // Create a state variable for the company mission
   const {
+    completion: completionDesciption,
+    complete: completeDescription,
+    input: inputDescription,
+    stop: stopDescription,
+    isLoading: isLoadingDescription,
+    handleInputChange: handleInputChangeDescription,
+    handleSubmit: handleSubmitDescription,
+    setInput: setInputDescription,
+  } = useCompletion({
+    api: '/api/completion',
+  });
+
+  const {
     completion: completionMission,
     complete: completeMission,
     input: inputMission,
-    stop: stopMission,
-    isLoading: isLoadingMission,
-    handleInputChange: handleInputChangeMission,
-    handleSubmit: handleSubmitMission,
     setInput: setInputMission,
   } = useCompletion({
     api: '/api/completion',
   });
 
   const {
-    completion: completion2,
-    complete: complete2,
-    input: input2,
-    stop: stop2,
-    isLoading: isLoading2,
-    handleInputChange: handleInputChange2,
-    handleSubmit: handleSubmit2,
-    setInput: setInput2,
+    completion: completionAudience,
+    complete: completeAudience,
+    input: inputAudience,
+    stop: stopAudience,
+    isLoading: isLoadingAudience,
+    handleInputChange: handleInputChangeAudience,
+    handleSubmit: handleSubmitAudience,
+    setInput: setInputAudience,
   } = useCompletion({
     api: '/api/completion',
   });
@@ -131,11 +128,13 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     console.log("Company Name I get from the GET: " + data.companyName);
     console.log("Company URL I get from the GET: " + data.companyUrl);
 
-    await openAiCompanyMission(data.companyName, data.companyUrl);
+    await openAiMission(data.companyName, data.companyUrl);
+    await openAiAudience(data.companyName, data.companyUrl);
+    await openAiDescription(data.companyName, data.companyUrl);
 
   };
 
-  const openAiCompanyMission = async (companyName: string, companyUrl: string) => {
+  const openAiMission = async (companyName: string, companyUrl: string) => {
     
     const missionPromptToSend = "What is the mission of " + companyName + companyUrl + "?";
     
@@ -143,6 +142,28 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
     //use setInput to set input to the prompt
     setInputMission(missionPromptToSend);
+
+  };
+
+  const openAiAudience = async (companyName: string, companyUrl: string) => {
+    
+    const audiencePromptToSend = "What is the mission of " + companyName + companyUrl + "?";
+    
+    console.log("Getting company mission from OpenAI with the question: " + audiencePromptToSend);
+
+    //use setInput to set input to the prompt
+    setInputAudience(audiencePromptToSend);
+
+  };
+
+  const openAiDescription = async (companyName: string, companyUrl: string) => {
+    
+    const descriptionPromptToSend = "What is the mission of " + companyName + companyUrl + "?";
+    
+    console.log("Getting company mission from OpenAI with the question: " + descriptionPromptToSend);
+
+    //use setInput to set input to the prompt
+    setInputDescription(descriptionPromptToSend);
 
   };
 
@@ -170,9 +191,17 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
       completeMission(inputMission);
     }
 
+    if (inputAudience) {
+      completeMission(inputMission);
+    }
+
+    if (inputDescription) {
+      completeMission(inputMission);
+    }
+
     fetchData();
 
-  }, [inputMission]);
+  }, [inputMission, inputAudience, inputDescription]);
 
   return (
     <main>
@@ -253,23 +282,6 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
         </CardContent>
       </Card>
     </div>
-    <div>
-      <form onSubmit={handleSubmitMission}>
-        <input
-          value={inputMission}
-          placeholder="Enter your prompt..."
-          onChange={handleInputChangeMission}
-        />
-        <p>Completion result: {completionMission}</p>
-        <button type="button" onClick={stop}>
-          Stop
-        </button>
-        <button disabled={isLoadingMission} type="submit">
-          Submit
-        </button>
-      </form>
-    </div>
-
   </main>
   );
 };
