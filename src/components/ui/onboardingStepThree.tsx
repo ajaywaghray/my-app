@@ -14,7 +14,7 @@ import { useUser } from "@clerk/nextjs";
 
 import * as React from "react"
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 
 import { Textarea } from "@/components/ui/textarea"
 
@@ -91,7 +91,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     isLoading,
     handleInputChange,
     handleSubmit,
-    setInput
+    setInput,
   } = useCompletion({
     api: '/api/completion',
   });
@@ -132,9 +132,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
         //use setInput to set input to the prompt
         setInput(missionPromptToSend);
 
-        console.log("Input set to: " + input);
-
-        const completion = await complete(input);
+        Textarea({ id: 'companymission', value: missionPromptToSend });
 
       };
 
@@ -200,7 +198,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           Company Mission
         </div>
 
-          <form>
+          <form onLoad={handleSubmit}>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
                 <Textarea id="companymission" placeholder= "Your company mission is loading..."  value= {completion} />
