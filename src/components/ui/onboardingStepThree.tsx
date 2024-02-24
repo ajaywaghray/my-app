@@ -132,7 +132,9 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     //use setInput to set input to the prompt
     await setInput(missionPromptToSend);
 
-    await complete(input);
+    if (input) {
+      await complete(input);
+    }
 
   };
 
@@ -156,9 +158,13 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
       await onLoad();
     };
 
+    if (input) {
+      complete(input);
+    }
+
     fetchData();
 
-  }, []);
+  }, [input]);
 
   return (
     <main>
