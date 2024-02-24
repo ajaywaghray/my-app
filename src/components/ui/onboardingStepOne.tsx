@@ -319,7 +319,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 <Checkbox onClick={handleCheckboxChangeClevel} id="clevel" className="border-2 border-zinc-400 dark:border-zinc-500"/>
                 <label
                   htmlFor="clevel"
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 align-middle"
                 >
                   C-Level
                 </label>
