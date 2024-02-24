@@ -132,10 +132,6 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     //use setInput to set input to the prompt
     await setInput(missionPromptToSend);
 
-    if (input) {
-      await complete(input);
-    }
-
   };
 
   const onSubmit = async () => {
