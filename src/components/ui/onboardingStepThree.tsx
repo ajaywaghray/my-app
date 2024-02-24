@@ -82,16 +82,28 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
   const [companyUrl, setCompanyUrl] = useState("");
 
   // Create a state variable for the company mission
-  const [companyMission, setCompanyMission] = useState("");
   const {
-    completion,
-    complete,
-    input,
-    stop,
-    isLoading,
-    handleInputChange,
-    handleSubmit,
-    setInput,
+    completion: completionMission,
+    complete: completeMission,
+    input: inputMission,
+    stop: stopMission,
+    isLoading: isLoadingMission,
+    handleInputChange: handleInputChangeMission,
+    handleSubmit: handleSubmitMission,
+    setInput: setInputMission,
+  } = useCompletion({
+    api: '/api/completion',
+  });
+
+  const {
+    completion: completion2,
+    complete: complete2,
+    input: input2,
+    stop: stop2,
+    isLoading: isLoading2,
+    handleInputChange: handleInputChange2,
+    handleSubmit: handleSubmit2,
+    setInput: setInput2,
   } = useCompletion({
     api: '/api/completion',
   });
@@ -130,7 +142,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     console.log("Getting company mission from OpenAI with the question: " + missionPromptToSend);
 
     //use setInput to set input to the prompt
-    await setInput(missionPromptToSend);
+    setInputMission(missionPromptToSend);
 
   };
 
@@ -154,13 +166,13 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
       await onLoad();
     };
 
-    if (input) {
-      complete(input);
+    if (inputMission) {
+      completeMission(inputMission);
     }
 
     fetchData();
 
-  }, [input]);
+  }, [inputMission]);
 
   return (
     <main>
@@ -203,7 +215,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Textarea id="companymission" placeholder= "Your company mission is loading..."  value= {completion} />
+                <Textarea id="companymission" placeholder= "Your company mission is loading..."  value= {completionMission} />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
@@ -217,7 +229,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Textarea id="productdescription" placeholder="Your product description is loading..." />
+                <Textarea id="productdescription" placeholder="Your product description is loading..." value= {completionMission} />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
@@ -231,7 +243,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
-                <Textarea id="email" placeholder="Your target audience is loading..." />
+                <Textarea id="email" placeholder="Your target audience is loading..." value= {completionMission} />
               </div>
               <div className="flex flex-col space-y-1.5">
               </div>
@@ -242,17 +254,17 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
       </Card>
     </div>
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmitMission}>
         <input
-          value={input}
+          value={inputMission}
           placeholder="Enter your prompt..."
-          onChange={handleInputChange}
+          onChange={handleInputChangeMission}
         />
-        <p>Completion result: {completion}</p>
+        <p>Completion result: {completionMission}</p>
         <button type="button" onClick={stop}>
           Stop
         </button>
-        <button disabled={isLoading} type="submit">
+        <button disabled={isLoadingMission} type="submit">
           Submit
         </button>
       </form>
