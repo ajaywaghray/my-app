@@ -305,7 +305,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
                 <Checkbox 
                     onClick={handleCheckboxChangeFounder}
                     id="founder"
-                    className="border-2 border-zinc-400 dark:border-zinc-500 align-middle"
+                    className="border-2 border-zinc-400 dark:border-zinc-500"
                 />
                 <label
                   htmlFor="founder"
