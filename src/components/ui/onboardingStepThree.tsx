@@ -136,7 +136,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
   const openAiMission = async (companyName: string, companyUrl: string) => {
     
-    const missionPromptToSend = "What is the mission of " + companyName + companyUrl + "?";
+    const missionPromptToSend = "Analyze the following company and website, identify the company's mission. If these details are not explicitly stated on the website, then infer the answers from the marketing content on the website. Provide response in a concise 2 sentence summary. Here is the company name and URL:" + companyName + companyUrl;
     
     console.log("Getting company mission from OpenAI with the question: " + missionPromptToSend);
 
@@ -147,9 +147,9 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
   const openAiAudience = async (companyName: string, companyUrl: string) => {
     
-    const audiencePromptToSend = "What is the mission of " + companyName + companyUrl + "?";
+    const audiencePromptToSend = "Analyze the following company and website, and identify the company's target audience, providing a two sentence summary of what their target audience is. If these details are not explicitly stated on the website, then infer the answers from the marketing content on the website. Here is the company name and URL:" + companyName + companyUrl;
     
-    console.log("Getting company mission from OpenAI with the question: " + audiencePromptToSend);
+    console.log("Getting company Audience from OpenAI with the question: " + audiencePromptToSend);
 
     //use setInput to set input to the prompt
     setInputAudience(audiencePromptToSend);
@@ -158,7 +158,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
   const openAiDescription = async (companyName: string, companyUrl: string) => {
     
-    const descriptionPromptToSend = "What is the mission of " + companyName + companyUrl + "?";
+    const descriptionPromptToSend = "Analyze the following company and website, and identify the company's product, providing a two sentence summary of what their product does. If these details are not explicitly stated on the website, then infer the answers from the marketing content on the website. Here is the company name and URL:" + companyName + companyUrl;
     
     console.log("Getting company mission from OpenAI with the question: " + descriptionPromptToSend);
 
