@@ -119,7 +119,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     console.log("Company Name I get from the GET: " + data.companyName);
     console.log("Company URL I get from the GET: " + data.companyUrl);
 
-    openAiCompanyMission(data.companyName, data.companyUrl);
+    await openAiCompanyMission(data.companyName, data.companyUrl);
 
   };
 
@@ -132,7 +132,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
         //use setInput to set input to the prompt
         setInput(missionPromptToSend);
 
-        Textarea({ id: 'companymission', value: missionPromptToSend });
+        console.log("Input is: " + input);
 
       };
 
@@ -198,7 +198,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           Company Mission
         </div>
 
-          <form onLoad={handleSubmit}>
+          <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
                 <Textarea id="companymission" placeholder= "Your company mission is loading..."  value= {completion} />
