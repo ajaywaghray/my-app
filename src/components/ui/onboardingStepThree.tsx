@@ -200,7 +200,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
         <div className="flex justify-between items-center">
           <div className="flex items-center" style={{ justifyContent: 'left' }}>
-            <div className="flex h-5 align-middle" /*style={{ justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}*/>
+            <div className="flex h-5 align-middle text-left font-semibold text-lg">
               { companyName } 
             </div>
             <div className="flex h-5 text-sm font-normal align-middle" style={{ justifyContent: 'left' }}>
