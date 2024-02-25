@@ -194,7 +194,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     <div className="flex font-semibold" style={{ justifyContent: 'center', alignItems: 'center', fontSize: '30px' }}>
       Set Up Your Company Profile
     </div>
-    <div className="flex pt-16" style={{ height: '50vh' }}>
+    <div className="flex pt-4" style={{ height: '50vh' }}>
       <Card className="w-[700px]">
         <CardContent>
 
@@ -209,7 +209,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           </div>
           <Button onClick={onNext}>Done</Button>
         </div>
-        <div className="flex text-zinc-500 text-sm font-normal pb-24 text-left">
+        <div className="flex text-zinc-500 text-sm font-normal pb-4 text-left">
         { companyName } is fascinating! We have summarized their key aspects. Anything to tweak or add?
         </div>
         
