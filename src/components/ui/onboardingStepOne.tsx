@@ -293,7 +293,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
               <Button onClick={async () => {
                 await onSubmit();
                 onNext();
-              }}>Next</Button>
+              }}>Next ➡️</Button>
 
             </div>
             <div style={{ display: 'flex', height: '24px', fontSize: '16px', fontWeight: '700' }}>

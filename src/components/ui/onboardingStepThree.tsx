@@ -207,7 +207,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
               { companyUrl }
             </div>
           </div>
-          <Button onClick={onNext}>Done</Button>
+          <Button onClick={onNext}>Done ➡️</Button>
         </div>
         <div className="flex text-zinc-500 text-sm font-normal pb-4 text-left">
         { companyName } is fascinating! We have summarized their key aspects. Anything to tweak or add?
