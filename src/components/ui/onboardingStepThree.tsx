@@ -24,21 +24,6 @@ import {
   SelectLabel,
 } from "@/components/ui/select"
 
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-
 import { Button } from "@/components/ui/button"
 
 import {
@@ -215,7 +200,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
         <div className="flex justify-between items-center">
           <div className="flex items-center" style={{ justifyContent: 'left' }}>
-            <div className="flex h-5 align-middle" style={{ justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
+            <div className="flex h-5 align-middle" /*style={{ justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}*/>
               { companyName } 
             </div>
             <div className="flex h-5 text-sm font-normal align-middle" style={{ justifyContent: 'left' }}>
