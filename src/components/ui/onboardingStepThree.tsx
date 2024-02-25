@@ -215,10 +215,10 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
 
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <div className="align-bottom" style={{ display: 'flex', justifyContent: 'left' }}>
-            <div style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
+            <div className="h-5" style={{ display: 'flex', justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
               { companyName } 
             </div>
-            <div className="text-sm font-normal align-baseline" style={{ display: 'flex', justifyContent: 'left' }}>
+            <div className="h-3.5 text-sm font-normal align-bottom" style={{ display: 'flex', justifyContent: 'left' }}>
               { companyUrl }
             </div>
           </div>
