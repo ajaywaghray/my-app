@@ -209,7 +209,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: '600', fontSize: '30px' }}>
       Set Up Your Company Profile
     </div>
-    <div style={{ display: 'flex', height: '50vh', justifyContent: 'center', alignItems: 'top', marginTop: '16px' }}>
+    <div style={{ display: 'flex', height: '50vh', marginTop: '16px' }}>
       <Card className="w-[700px]">
         <CardContent>
 
@@ -218,7 +218,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
             <div className="flex h-5 align-middle" style={{ justifyContent: 'left', fontWeight: '600', fontSize: '18px' }}>
               { companyName } 
             </div>
-            <div className="flex h-4 text-sm font-normal align-middle" style={{ justifyContent: 'left' }}>
+            <div className="flex h-5 text-sm font-normal align-middle" style={{ justifyContent: 'left' }}>
               { companyUrl }
             </div>
           </div>
