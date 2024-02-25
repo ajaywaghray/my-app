@@ -213,24 +213,26 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
         { companyName } is fascinating! We have summarized their key aspects. Anything to tweak or add?
         </div>
         
-        <Select>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Industry Served" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              <SelectLabel>Industry Served</SelectLabel>
-              <SelectItem value="webdesignanddevelopment">Web Design and Development</SelectItem>
-              <SelectItem value="customerservice">Customer Service</SelectItem>
-              <SelectItem value="businessconsulting">Business Consulting</SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
-        
-        <div className="flex w-full h-6 text-base font-bold">
-          Company Mission
+        <div className="pb-2">
+          <Select>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Industry Served" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectLabel>Industry Served</SelectLabel>
+                <SelectItem value="webdesignanddevelopment">Web Design and Development</SelectItem>
+                <SelectItem value="customerservice">Customer Service</SelectItem>
+                <SelectItem value="businessconsulting">Business Consulting</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
         </div>
-
+        
+        <div className="pb-2">
+          <div className="flex w-full h-6 text-base font-bold">
+            Company Mission
+          </div>
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
@@ -240,6 +242,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
               </div>
             </div>
           </form>
+        </div>
 
           <div className="flex w-full h-6 text-base font-bold">
             Product Description
