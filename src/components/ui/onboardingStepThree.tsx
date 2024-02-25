@@ -242,7 +242,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           </SelectContent>
         </Select>
         
-        <div className="flex w-full h-6" style={{ fontSize: '16px', fontWeight: '700' }}>
+        <div className="flex w-full h-6 text-base font-bold">
           Company Mission
         </div>
 
@@ -256,7 +256,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
             </div>
           </form>
 
-          <div className="flex w-full h-6" style={{ fontSize: '16px', fontWeight: '700' }}>
+          <div className="flex w-full h-6 text-base font-bold">
             Product Description
           </div>
 
@@ -270,7 +270,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
             </div>
           </form>
 
-          <div className="flex w-full h-6" style={{ fontSize: '16px', fontWeight: '700' }}>
+          <div className="flex w-full h-6 text-base font-bold">
             Target Audience
           </div>
 
