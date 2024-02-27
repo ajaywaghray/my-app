@@ -189,93 +189,95 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
   }, [inputMission, inputAudience, inputDescription]);
 
   return (
-    <main className="bg-zinc-300 dark:bg-zinc-700">
+    <main>
     <OnboardingHeaderComponent></OnboardingHeaderComponent>
-    <div className="flex text-3xl font-semibold pt-4 justify-center items-center">
-      Set Up Your Company Profile
-    </div>
-    <div className="flex pt-4 h-3/4 justify-center">
-      <Card className="w-[700px]">
-        <CardContent>
+    <div className="bg-zinc-300 dark:bg-zinc-700">
+      <div className="flex text-3xl font-semibold pt-4 justify-center items-center">
+        Set Up Your Company Profile
+      </div>
+      <div className="flex pt-4 h-3/4 justify-center">
+        <Card className="w-[700px]">
+          <CardContent>
 
-        <div className="flex justify-between items-center pt-4 pb-2">
-          <div className="flex items-center text-left">
-            <div className="flex text-lg font-semibold align-middle text-left pr-4">
-              { companyName } 
-            </div>
-            <div className="flex text-sm font-normal align-middle text-left">
-              { companyUrl }
-            </div>
-          </div>
-          <Button onClick={onNext}>Done ➡️</Button>
-        </div>
-        <div className="flex text-zinc-500 text-sm font-normal pb-4 text-left">
-        { companyName } is fascinating! We have summarized their key aspects. Anything to tweak or add?
-        </div>
-        
-        <div className="pb-2">
-          <Select>
-            <SelectTrigger className="h-14 w-full">
-              <SelectValue placeholder="Industry Served" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                <SelectLabel>Industry Served</SelectLabel>
-                <SelectItem value="webdesignanddevelopment">Web Design and Development</SelectItem>
-                <SelectItem value="customerservice">Customer Service</SelectItem>
-                <SelectItem value="businessconsulting">Business Consulting</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-        </div>
-        
-        <div className="pb-2">
-          <div className="flex w-full h-6 text-sm font-medium">
-            Company Mission
-          </div>
-          <form>
-            <div className="grid w-full items-center gap-4">
-              <div className="flex flex-col space-y-1.5">
-                <Textarea id="companymission" placeholder= "Your company mission is loading..."  value= {completionMission} />
+          <div className="flex justify-between items-center pt-4 pb-2">
+            <div className="flex items-center text-left">
+              <div className="flex text-lg font-semibold align-middle text-left pr-4">
+                { companyName } 
               </div>
-              <div className="flex flex-col space-y-1.5">
+              <div className="flex text-sm font-normal align-middle text-left">
+                { companyUrl }
               </div>
             </div>
-          </form>
-        </div>
+            <Button onClick={onNext}>Done ➡️</Button>
+          </div>
+          <div className="flex text-zinc-500 text-sm font-normal pb-4 text-left">
+          { companyName } is fascinating! We have summarized their key aspects. Anything to tweak or add?
+          </div>
+          
+          <div className="pb-2">
+            <Select>
+              <SelectTrigger className="h-14 w-full">
+                <SelectValue placeholder="Industry Served" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>Industry Served</SelectLabel>
+                  <SelectItem value="webdesignanddevelopment">Web Design and Development</SelectItem>
+                  <SelectItem value="customerservice">Customer Service</SelectItem>
+                  <SelectItem value="businessconsulting">Business Consulting</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
+          
+          <div className="pb-2">
+            <div className="flex w-full h-6 text-sm font-medium">
+              Company Mission
+            </div>
+            <form>
+              <div className="grid w-full items-center gap-4">
+                <div className="flex flex-col space-y-1.5">
+                  <Textarea id="companymission" placeholder= "Your company mission is loading..."  value= {completionMission} />
+                </div>
+                <div className="flex flex-col space-y-1.5">
+                </div>
+              </div>
+            </form>
+          </div>
 
-        <div className="pb-2">
-          <div className="flex w-full h-6 text-sm font-medium">
-            Product Description
-          </div>
-          <form>
-            <div className="grid w-full items-center gap-4">
-              <div className="flex flex-col space-y-1.5">
-                <Textarea id="productdescription" placeholder="Your product description is loading..." value= {completionDescription} />
-              </div>
-              <div className="flex flex-col space-y-1.5">
-              </div>
+          <div className="pb-2">
+            <div className="flex w-full h-6 text-sm font-medium">
+              Product Description
             </div>
-          </form>
-        </div>
-
-        <div className="pb-2">
-          <div className="flex w-full h-6 text-sm font-medium">
-            Target Audience
+            <form>
+              <div className="grid w-full items-center gap-4">
+                <div className="flex flex-col space-y-1.5">
+                  <Textarea id="productdescription" placeholder="Your product description is loading..." value= {completionDescription} />
+                </div>
+                <div className="flex flex-col space-y-1.5">
+                </div>
+              </div>
+            </form>
           </div>
-          <form>
-            <div className="grid w-full items-center gap-4">
-              <div className="flex flex-col space-y-1.5">
-                <Textarea id="email" placeholder="Your target audience is loading..." value= {completionAudience} />
-              </div>
-              <div className="flex flex-col space-y-1.5">
-              </div>
-            </div>
-          </form>
-        </div>
 
-        </CardContent>
-      </Card>
+          <div className="pb-2">
+            <div className="flex w-full h-6 text-sm font-medium">
+              Target Audience
+            </div>
+            <form>
+              <div className="grid w-full items-center gap-4">
+                <div className="flex flex-col space-y-1.5">
+                  <Textarea id="email" placeholder="Your target audience is loading..." value= {completionAudience} />
+                </div>
+                <div className="flex flex-col space-y-1.5">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          </CardContent>
+        </Card>
+      </div>
     </div>
   </main>
   );
