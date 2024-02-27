@@ -277,7 +277,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   return (
     <main>
       <OnboardingHeaderComponent></OnboardingHeaderComponent>
-      <div className="w-screen h-screen bg-zinc-300 dark:bg-zinc-900">
+      <div className="w-screen h-screen bg-zinc-100 dark:bg-zinc-900">
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: '600', fontSize: '30px', marginTop: '16px' }}>
         Welcome to Quikest!
       </div>
