@@ -277,6 +277,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
   return (
     <main>
       <OnboardingHeaderComponent></OnboardingHeaderComponent>
+      <div className="w-full h-full bg-zinc-300 dark:bg-zinc-900">
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: '600', fontSize: '30px', marginTop: '16px' }}>
         Welcome to Quikest!
       </div>
@@ -575,6 +576,7 @@ const OnboardingStepOne = ({ onNext }: { onNext: () => void; }) => {
           <CardFooter className="flex justify-between">
           </CardFooter>
         </Card>
+      </div>
       </div>
     </main>
   );

@@ -170,6 +170,7 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
   return (
     <main>
     <OnboardingHeaderComponent></OnboardingHeaderComponent>
+    <div className="w-full h-full bg-zinc-300 dark:bg-zinc-900">
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: '600', fontSize: '30px' }}>
       Set up your company profile
     </div>
@@ -291,6 +292,7 @@ const OnboardingStepTwo = ({ onNext }: { onNext: () => void; }) => {
 
         </CardContent>
       </Card>
+    </div>
     </div>
   </main>
   );
