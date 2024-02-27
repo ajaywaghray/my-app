@@ -215,7 +215,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
         
         <div className="pb-2">
           <Select>
-            <SelectTrigger className="w-[180px]">
+            <SelectTrigger className="w-max">
               <SelectValue placeholder="Industry Served" />
             </SelectTrigger>
             <SelectContent>
@@ -230,7 +230,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
         </div>
         
         <div className="pb-2">
-          <div className="flex w-full h-6 text-base font-bold">
+          <div className="flex w-full h-6 text-sm font-medium">
             Company Mission
           </div>
           <form>
@@ -245,7 +245,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
         </div>
 
         <div className="pb-2">
-          <div className="flex w-full h-6 text-base font-bold">
+          <div className="flex w-full h-6 text-sm font-medium">
             Product Description
           </div>
           <form>
@@ -260,7 +260,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
         </div>
 
         <div className="pb-2">
-          <div className="flex w-full h-6 text-base font-bold">
+          <div className="flex w-full h-6 text-sm font-medium">
             Target Audience
           </div>
           <form>
