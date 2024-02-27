@@ -189,7 +189,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
   }, [inputMission, inputAudience, inputDescription]);
 
   return (
-    <main className="bg-zinc-300">
+    <main className="bg-zinc-300 dark:bg-zinc-700">
     <OnboardingHeaderComponent></OnboardingHeaderComponent>
     <div className="flex text-3xl font-semibold pt-4 justify-center items-center">
       Set Up Your Company Profile
