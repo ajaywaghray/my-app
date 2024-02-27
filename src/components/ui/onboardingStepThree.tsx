@@ -194,7 +194,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
     <div className="flex font-semibold" style={{ justifyContent: 'center', alignItems: 'center', fontSize: '30px' }}>
       Set Up Your Company Profile
     </div>
-    <div className="flex pt-4 justify-items-center" style={{ height: '50vh' }}>
+    <div className="flex pt-4" style={{ justifyContent: 'center', height: '50vh' }}>
       <Card className="w-[700px]">
         <CardContent>
 
