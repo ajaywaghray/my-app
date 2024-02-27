@@ -195,7 +195,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
       Set Up Your Company Profile
     </div>
     <div className="flex pt-4" style={{ height: '50vh' }}>
-      <Card className="w-[700px]">
+      <Card className="w-[700px] justify-self-center">
         <CardContent>
 
         <div className="flex justify-between items-center py-2">
@@ -273,7 +273,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
             </div>
           </form>
         </div>
-        
+
         </CardContent>
       </Card>
     </div>
