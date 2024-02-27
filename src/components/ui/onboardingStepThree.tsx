@@ -215,7 +215,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
         
         <div className="pb-2">
           <Select>
-            <SelectTrigger className="w-max">
+            <SelectTrigger className="w-full">
               <SelectValue placeholder="Industry Served" />
             </SelectTrigger>
             <SelectContent>
