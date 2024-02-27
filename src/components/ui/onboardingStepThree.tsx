@@ -244,10 +244,10 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
           </form>
         </div>
 
+        <div className="pb-2">
           <div className="flex w-full h-6 text-base font-bold">
             Product Description
           </div>
-
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
@@ -257,11 +257,12 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
               </div>
             </div>
           </form>
+        </div>
 
+        <div className="pb-2">
           <div className="flex w-full h-6 text-base font-bold">
             Target Audience
           </div>
-
           <form>
             <div className="grid w-full items-center gap-4">
               <div className="flex flex-col space-y-1.5">
@@ -271,7 +272,8 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
               </div>
             </div>
           </form>
-
+        </div>
+        
         </CardContent>
       </Card>
     </div>
