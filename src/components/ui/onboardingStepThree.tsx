@@ -198,7 +198,7 @@ const OnboardingStepThree = ({ onNext }: { onNext: () => void; }) => {
       <Card className="w-[700px]">
         <CardContent>
 
-        <div className="flex justify-between items-center py-2">
+        <div className="flex justify-between items-center pt-4 pb-2">
           <div className="flex items-center text-left">
             <div className="flex text-lg font-semibold align-middle text-left pr-4">
               { companyName } 
